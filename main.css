@@ -124,7 +124,7 @@ em {
 
   section:nth-of-type(1) .contents {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
 
   section:nth-of-type(1) .desc {

@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Thin.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard';
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: #101820;
+  z-index: 999;
+}
+
+header ul.navi {
+  display: flex;
+  align-items: center;
+  font-family: 'gotu';
+}
+
+em {
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+}
+
+@media screen and (min-width: 1100px) {
+
+  header {
+    width: 100vw;
+    height: 80px;
+  }
+
+  header ul.navi {
+    gap: 40px;
+    font-size: 20px;
+    color: #fff;
+  }
+
+  section {
+    position: relative;
+  }
+
+  section:not(:nth-of-type(2)) {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .contents {
+    max-width: 1440px;
+    margin: auto;
+    height: 100%;
+  }
+
+  section:not(:nth-of-type(2)) .contents {
+    width: 100%;
+    height: calc(100% - 80px);
+    margin-top: 80px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 85px;
+  }
+
+  header .contents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 85px;
+  }
+
+  section:nth-of-type(1) {
+    background-image: url("./images/main1_off.jpg");
+    background-position: left center;
+    transition: 1.5s background-image;
+  }
+  section:nth-of-type(1).on {
+    background-image: url("./images/main1_on.jpg");
+  }
+
+  section:nth-of-type(1) .contents {
+    display: flex;
+    align-items: center;
+  }
+
+  section:nth-of-type(1) .desc {
+    max-height: 944px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  section:nth-of-type(1) p:nth-of-type(1) {
+    margin-top: 112px;
+    font-size: 52px;
+    font-weight: 300;
+    color: #fff;
+    line-height: 64px;
+  }
+
+  section:nth-of-type(1) img {
+    margin-top: 111px;
+  }
+
+  section:nth-of-type(1) p:nth-of-type(2) {
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    width: fit-content;
+    padding: 20px 44px;
+    background-color: #101820;
+    border-radius: 27px;
+    margin-top: auto;
+    margin-bottom: 60px;
+  }
+
+  section:nth-of-type(1) .waves {
+    position: absolute;
+    left: calc(75% + 150px);
+    bottom: 85px;
+    transition: 0.5s opacity;
+    opacity: 0;
+  }
+
+  section:nth-of-type(1) .waves.on {
+    opacity: 1;
+  }
+
+  section:nth-of-type(1) .waves .wave {
+    position: absolute;
+    border: 2px solid #fff;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    width: 75px;
+    bottom: 0;
+    right: 0;
+    transform-origin: center;
+    opacity: 1;
+  }
+
+  section:nth-of-type(1) .waves.on .wave {
+    animation-name: wave;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  section:nth-of-type(1) .waves .wave:nth-child(1) {
+    animation-delay: 0s;
+  }
+
+  section:nth-of-type(1) .waves .wave:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+
+  section:nth-of-type(1) .waves .wave:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes wave {
+    0% {
+      transform: scale(1);
+      border-width: 2px;
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      border-width: 1px;
+      opacity: 0;
+    }
+  }
+}

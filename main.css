@@ -437,7 +437,7 @@ em {
     line-height: 62px;
     font-weight: 300;
     position: absolute;
-    bottom: calc(40% - 107px);
+    bottom: calc(50% - 107px);
     width: calc(100% - 800px);
   }
 
@@ -451,7 +451,7 @@ em {
     width: 650px;
     position: absolute;
     right: 60px;
-    bottom: calc(40% - 248px);
+    bottom: calc(50% - 248px);
   }
 
   section:nth-of-type(4) .swiper {
@@ -502,5 +502,196 @@ em {
   section:nth-of-type(4) .swiperArrowNext {
     transform: rotate(180deg);
     right: 100px;
+  }
+
+  section:nth-of-type(5) {
+    background-color: #ebeff0;
+  }
+
+  section:nth-of-type(5) .prd {
+    position: absolute;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    left: calc(50% - 60px);
+    width: 50vh;
+  }
+
+  section:nth-of-type(5) .prd img {
+    width: 100%;
+  }
+
+  .faq {
+    width: 615px;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    right: 85px;
+    color: #101820;
+  }
+
+  .faq h2 {
+    font-size: 56px;
+    font-weight: 700;
+  }
+
+  .faq h3 {
+    font-size: 24px;
+    margin-top: 40px;
+    font-weight: 400;
+  }
+
+  .faq dl {
+    border-top: 1px solid #000;
+    margin-top: 50px;
+  }
+
+  .faq dt {
+    padding: 40px 0;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+  }
+
+  .faq dd {
+    border-bottom: 1px solid #000;
+    padding-bottom: 0;
+    height: 0;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 300;
+    transition: 0.5s;
+  }
+
+  .faq dd.on {
+    padding-bottom: 30px;
+  }
+
+  .faq dd.on:first-of-type {
+    height: 69px;
+  }
+
+  .faq dd.on:nth-of-type(2) {
+    height: 50px;
+  }
+
+  .faq .btn {
+    width: 24px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .faq .btn::before,
+  .faq .btn::after {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .faq .btn::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    transition: 0.5s;
+  }
+
+
+  .faq .btn.on::after {
+    opacity: 0;
+  }
+
+  footer {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(16, 24, 32, 0.6);
+  }
+
+  footer .contents {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+
+  footer nav {
+    background-color: #122231;
+    padding: 0 16px;
+    width: 288px;
+    font-size: 18px;
+    color: #fff;
+    font-weight: 300;
+    position: relative;
+  }
+
+  footer nav p,
+  footer li {
+    position: relative;
+    padding: 16px 0;
+  }
+
+  footer nav a {
+    width: 100%;
+    display: block;
+  }
+
+  footer ul {
+    position: absolute;
+    width: 100%;
+    bottom: 53px;
+    left: 0;
+    padding: 0 16px;
+    background-color: #122231;
+    transition: 0.5s height;
+    height: 0;
+    overflow: hidden;
+  }
+
+  footer li {
+    padding: 16px 0;
+    position: relative;
+  }
+
+  footer li {
+    border-bottom: 1px solid #fff;
+  }
+
+  footer li::after,
+  footer nav p::after {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 10px;
+    background: url("./images/footerArrow.png") no-repeat center/cover;
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 0;
+    cursor: pointer;
+  }
+
+  footer nav p.on::after {
+    transform: rotate(180deg);
+  }
+
+  footer li::after {
+    transform: rotate(270deg);
+  }
+
+  footer .contents>p {
+    font-size: 12px;
+    color: #fff;
+    line-height: 18px;
+    font-weight: 300;
   }
 }

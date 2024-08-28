@@ -45,4 +45,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   const swiper = new Swiper('.swiper', swiperSetting);
+
+
+  const faqBtn = document.querySelectorAll(".faq .btn");
+  faqBtn.forEach((e) => {
+    e.addEventListener("click", () => {
+      e.classList.toggle("on");
+      e.closest("dt").nextElementSibling.classList.toggle("on");
+    });
+  });
+
+  let isNav = false;
+  document.querySelector("footer nav").addEventListener("click", (e) => {
+    isNav = !isNav;
+    e.target.classList.toggle("on");
+    console.log(isNav)
+    if(isNav) {
+      let lh = 0;
+      document.querySelectorAll("footer nav li").forEach(() => {
+        lh += 53;
+      });
+      document.querySelector("footer ul").style.height = `${lh}px`;
+    } else {
+      document.querySelector("footer ul").style.height = "0";
+    }
+  });
 });

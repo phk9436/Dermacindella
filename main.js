@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //fullpage
   const fullpageSetting = {
+    anchors: ['section01', 'section02', 'section03','section04', 'section05'],
+    menu: ".navi",
     onLeave: function(origin, destination) {
       document.querySelectorAll(".section")[destination.index].classList.add("on");
       if(destination.index === 2) {

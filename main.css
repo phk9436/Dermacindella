@@ -90,7 +90,7 @@ em {
     background-size: cover;
   }
 
-  section:not(:nth-of-type(2)) {
+  section:not(.section02) {
     height: 100vh;
   }
 
@@ -115,22 +115,22 @@ em {
     padding: 0 85px;
   }
 
-  section:nth-of-type(1) {
+  section.section01 {
     background-image: url("./images/main1_off.jpg");
     background-position: left center;
     transition: 1.5s background-image;
   }
 
-  section:nth-of-type(1).on {
+  section.section01.on {
     background-image: url("./images/main1_on.jpg");
   }
 
-  section:nth-of-type(1) .contents {
+  section.section01 .contents {
     display: flex;
     align-items: flex-end;
   }
 
-  section:nth-of-type(1) .desc {
+  section.section01 .desc {
     max-height: 944px;
     width: 100%;
     height: 100%;
@@ -139,7 +139,7 @@ em {
     position: relative;
   }
 
-  section:nth-of-type(1) p:nth-of-type(1) {
+  section.section01 p:nth-of-type(1) {
     margin-top: 112px;
     font-size: 52px;
     font-weight: 300;
@@ -147,11 +147,11 @@ em {
     line-height: 64px;
   }
 
-  section:nth-of-type(1) img {
+  section.section01 img {
     margin-top: 111px;
   }
 
-  section:nth-of-type(1) p:nth-of-type(2) {
+  section.section01 p:nth-of-type(2) {
     font-size: 16px;
     font-weight: 400;
     color: #fff;
@@ -163,7 +163,7 @@ em {
     margin-bottom: 60px;
   }
 
-  section:nth-of-type(1) .waves {
+  section.section01 .waves {
     position: absolute;
     left: calc(75% + 150px);
     bottom: 85px;
@@ -171,11 +171,11 @@ em {
     opacity: 0;
   }
 
-  section:nth-of-type(1) .waves.on {
+  section.section01 .waves.on {
     opacity: 1;
   }
 
-  section:nth-of-type(1) .waves .wave {
+  section.section01 .waves .wave {
     position: absolute;
     border: 2px solid #fff;
     aspect-ratio: 1;
@@ -187,21 +187,21 @@ em {
     opacity: 1;
   }
 
-  section:nth-of-type(1) .waves.on .wave {
+  section.section01 .waves.on .wave {
     animation-name: wave;
     animation-duration: 2s;
     animation-iteration-count: infinite;
   }
 
-  section:nth-of-type(1) .waves .wave:nth-child(1) {
+  section.section01 .waves .wave:nth-child(1) {
     animation-delay: 0s;
   }
 
-  section:nth-of-type(1) .waves .wave:nth-child(2) {
+  section.section01 .waves .wave:nth-child(2) {
     animation-delay: 0.3s;
   }
 
-  section:nth-of-type(1) .waves .wave:nth-child(3) {
+  section.section01 .waves .wave:nth-child(3) {
     animation-delay: 0.6s;
   }
 
@@ -219,59 +219,64 @@ em {
     }
   }
 
-  section:nth-of-type(2) {
-    background-image: url("./images/main2_on.png");
+  section.section02 {
+    background-image: url("./images/main2_off.png");
     background-attachment: fixed;
-
+    transition: 1s background-image;
+    transition-delay: 0.5s;
   }
 
-  section:nth-of-type(2) .contents {
+  section.section02.on {
+    background-image: url("./images/main2_on.png");
+  }
+
+  section.section02 .contents {
     height: 1558px;
     position: relative;
   }
 
 
-  section:nth-of-type(2) .desc {
+  section.section02 .desc {
     position: sticky;
     top: calc(100vh - 620px);
   }
 
-  section:nth-of-type(2) .desc p {
+  section.section02 .desc p {
     font-size: 40px;
     font-weight: 300;
     color: #fff;
     line-height: 62px;
   }
 
-  section:nth-of-type(2) .desc em {
+  section.section02 .desc em {
     font-size: 55px;
     margin-bottom: 30px;
     display: inline-block;
   }
 
-  section:nth-of-type(2) .cards {
+  section.section02 .cards {
     position: absolute;
     right: 85px;
     top: 80px;
   }
 
-  section:nth-of-type(2) .cardTop {
+  section.section02 .cardTop {
     display: flex;
     gap: 40px;
     justify-content: flex-end;
   }
 
-  section:nth-of-type(2) .cardWrap {
+  section.section02 .cardWrap {
     display: flex;
     flex-direction: column;
     gap: 40px;
   }
 
-  section:nth-of-type(2) .cardWrap:nth-child(2) {
+  section.section02 .cardWrap:nth-child(2) {
     margin-top: 254px;
   }
 
-  section:nth-of-type(2) .card {
+  section.section02 .card {
     width: 288px;
     height: 400px;
     border-radius: 24px;
@@ -285,27 +290,27 @@ em {
     backdrop-filter: blur(5px);
   }
 
-  section:nth-of-type(2) .card p {
+  section.section02 .card p {
     font-size: 28px;
     line-height: 38px;
     font-weight: 400;
     color: #101820;
   }
 
-  section:nth-of-type(2) .card em {
+  section.section02 .card em {
     display: inline-block;
     margin-bottom: 16px;
     font-weight: 700;
     font-size: 46px;
   }
 
-  section:nth-of-type(2) .card .imgWrap {
+  section.section02 .card .imgWrap {
     position: absolute;
     top: 7px;
     right: 7px;
   }
 
-  section:nth-of-type(2) .cardDesc {
+  section.section02 .cardDesc {
     border: 1px solid #fff;
     border-radius: 24px;
     padding: 16px;
@@ -317,19 +322,19 @@ em {
     width: 615px;
   }
 
-  section:nth-of-type(2) .cardDesc dl {
+  section.section02 .cardDesc dl {
     display: grid;
     grid-template-columns: 171px 444px;
   }
 
-  section:nth-of-type(2) .cardDesc dt {
+  section.section02 .cardDesc dt {
     text-align: right;
     padding-right: 20px;
     font-weight: 500;
     position: relative;
   }
 
-  section:nth-of-type(2) .cardDesc dt::after {
+  section.section02 .cardDesc dt::after {
     content: '';
     display: block;
     height: 12px;
@@ -340,20 +345,15 @@ em {
     top: calc(50% - 6px);
   }
 
-  section:nth-of-type(2) .cardDesc dd {
+  section.section02 .cardDesc dd {
     padding-left: 18px;
     font-weight: 300;
   }
-
-  section:nth-of-type(3) {
-    background-image: url("./images/main3.png");
-  }
-
-  section:nth-of-type(3) .contents {
+  section.section03 .contents {
     overflow: hidden;
   }
 
-  section:nth-of-type(3) .prdGrid {
+  section.section03 .prdGrid {
     display: flex;
     gap: 40px;
     justify-content: space-between;
@@ -362,34 +362,35 @@ em {
     bottom: 60px;
     width: calc(100% - 170px);
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(200px);
     transition: 1s;
+    transition-delay: 0.7s;
   }
 
-  section:nth-of-type(3) .prdGrid.on {
+  section.section03.on .prdGrid {
     opacity: 1;
     transform: translateY(0);
   }
 
-  section:nth-of-type(3) .prdDesc {
+  section.section03 .prdDesc {
     width: 100%;
     max-width: 614px;
     color: #fff;
   }
 
-  section:nth-of-type(3) .prdDesc p {
+  section.section03 .prdDesc p {
     font-size: 40px;
     font-weight: 300;
     line-height: 62px;
   }
 
-  section:nth-of-type(3) .btnWrap {
+  section.section03 .btnWrap {
     display: flex;
     gap: 30px;
     margin-top: 50px;
   }
 
-  section:nth-of-type(3) .btnWrap a {
+  section.section03 .btnWrap a {
     border: 1px solid #fff;
     padding-left: 80px;
     font-size: 20px;
@@ -399,7 +400,7 @@ em {
     position: relative;
   }
 
-  section:nth-of-type(3) .btnWrap a::before {
+  section.section03 .btnWrap a::before {
     content: '';
     display: block;
     width: 30px;
@@ -412,29 +413,25 @@ em {
     background-size: cover;
   }
 
-  section:nth-of-type(3) .btnWrap a:first-child::before {
+  section.section03 .btnWrap a:first-child::before {
     background-image: url("./images/main3_btn1.png");
   }
 
-  section:nth-of-type(3) .btnWrap a:last-child::before {
+  section.section03 .btnWrap a:last-child::before {
     background-image: url("./images/main3_btn2.png");
   }
 
-  section:nth-of-type(3) .prdDesc em {
+  section.section03 .prdDesc em {
     font-size: 56px;
     display: inline-block;
     margin-bottom: 30px;
   }
 
-  section:nth-of-type(3) .prdImg img {
+  section.section03 .prdImg img {
     max-height: calc(100vh - 260px);
   }
 
-  section:nth-of-type(4) {
-    background-image: url("./images/main4.png");
-  }
-
-  section:nth-of-type(4) p {
+  section.section04 p {
     font-size: 40px;
     line-height: 62px;
     font-weight: 300;
@@ -443,53 +440,53 @@ em {
     width: calc(100% - 800px);
   }
 
-  section:nth-of-type(4) em {
+  section.section04 em {
     font-size: 56px;
     display: inline-block;
     margin-bottom: 30px;
   }
 
-  section:nth-of-type(4) .swiperWrap {
+  section.section04 .swiperWrap {
     width: 650px;
     position: absolute;
     right: 60px;
     bottom: calc(50% - 248px);
   }
 
-  section:nth-of-type(4) .swiper {
+  section.section04 .swiper {
     overflow-y: visible;
   }
 
-  section:nth-of-type(4) .swiper img {
+  section.section04 .swiper img {
     width: 100%;
   }
 
-  section:nth-of-type(4) .swiper .swiper-slide img {
+  section.section04 .swiper .swiper-slide img {
     transition: 0.5s filter;
   }
-  section:nth-of-type(4) .swiper .swiper-slide:not(.swiper-slide-active) img{
+  section.section04 .swiper .swiper-slide:not(.swiper-slide-active) img{
     filter: brightness(0.8);
   }
-  section:nth-of-type(4) .swiperBtnWrapper {
+  section.section04 .swiperBtnWrapper {
     display: flex;
     justify-content: center;
     margin-top: 24px;
   }
-  section:nth-of-type(4) .swiperBtnWrapper span:where(:nth-child(5), :nth-child(6), :nth-child(7), :nth-child(8)) {
+  section.section04 .swiperBtnWrapper span:where(:nth-child(5), :nth-child(6), :nth-child(7), :nth-child(8)) {
     display: none;
   }
-  section:nth-of-type(4) .swiperBtnWrapper span {
+  section.section04 .swiperBtnWrapper span {
     width: 10px;
     height: 10px;
     background-color: #d9d9d9;
     opacity: 1;
     margin: 0 10px !important;
   }
-  section:nth-of-type(4) .swiperBtnWrapper span.swiper-pagination-bullet-active {
+  section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
     background-color: #101820;
   }
 
-  section:nth-of-type(4) .swiperArrow {
+  section.section04 .swiperArrow {
     width: 13px;
     height: 26px;
     background: url("./images/Arrow.png") no-repeat center/cover;
@@ -498,19 +495,19 @@ em {
     z-index: 10;
     cursor: pointer;
   }
-  section:nth-of-type(4) .swiperArrowPrev {
+  section.section04 .swiperArrowPrev {
     left: 100px;
   }
-  section:nth-of-type(4) .swiperArrowNext {
+  section.section04 .swiperArrowNext {
     transform: rotate(180deg);
     right: 100px;
   }
 
-  section:nth-of-type(5) {
+  section.section05 {
     background-color: #ebeff0;
   }
 
-  section:nth-of-type(5) .prd {
+  section.section05 .prd {
     position: absolute;
     top: 50%;
     transform: translate(-100%, -50%);
@@ -518,7 +515,7 @@ em {
     width: 50vh;
   }
 
-  section:nth-of-type(5) .prd img {
+  section.section05 .prd img {
     width: 100%;
   }
 
@@ -695,6 +692,33 @@ em {
     color: #fff;
     line-height: 18px;
     font-weight: 300;
+  }
+
+  .sectionBg {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+  }
+
+  .sectionBg .bgCont {
+    width: 100%;
+    height: calc(100% - 80px);
+    margin-top: 80px;
+    background-image: url("./images/main3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.7s background-image;
+  }
+
+  .sectionBg.on .bgCont {
+    background-image: url("./images/main4.png");
+  }
+
+  #fullpage {
+    z-index: 1;
   }
 }
 

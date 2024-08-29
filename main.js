@@ -2,17 +2,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //fullpage
   const fullpageSetting = {
-    afterLoad: function(origin, destination) {
-      console.log(destination.index)
+    onLeave: function(origin, destination) {
+      document.querySelectorAll(".section")[destination.index].classList.add("on");
+      if(destination.index === 2) {
+        document.querySelector(".sectionBg").classList.remove("on");
+      }
+      if(destination.index === 3) {
+        document.querySelector(".sectionBg").classList.add("on");
+      }
     }
   };
   new fullpage("#fullpage", fullpageSetting);
+
 
   //page1
   const sect = document.querySelectorAll("section");
   setTimeout(() => sect[0].classList.add("on"), 200);
 
-  setTimeout(() => document.querySelector(".waves").classList.add("on"), 1200);
+  setTimeout(() => document.querySelector(".waves").classList.add("on"), 700);
 
   //page4
   //swiper

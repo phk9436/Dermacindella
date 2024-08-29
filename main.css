@@ -102,12 +102,10 @@ em {
 
   section .contents {
     width: 100%;
-    height: calc(100% - 80px);
+    height: calc(100vh - 80px);
     padding: 0 85px;
     margin-top: 80px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
   }
 
   header .contents {
@@ -222,10 +220,14 @@ em {
   }
 
   section:nth-of-type(2) {
-    height: 1558px;
     background-image: url("./images/main2_on.png");
     background-attachment: fixed;
 
+  }
+
+  section:nth-of-type(2) .contents {
+    height: 1558px;
+    position: relative;
   }
 
 
@@ -694,4 +696,8 @@ em {
     line-height: 18px;
     font-weight: 300;
   }
+}
+
+.fp-watermark {
+  opacity: 0;
 }

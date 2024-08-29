@@ -1,14 +1,26 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  //fullpage
+  const fullpageSetting = {
+    afterLoad: function(origin, destination) {
+      console.log(destination.index)
+    }
+  };
+  new fullpage("#fullpage", fullpageSetting);
+
+  //page1
   const sect = document.querySelectorAll("section");
   setTimeout(() => sect[0].classList.add("on"), 200);
 
   setTimeout(() => document.querySelector(".waves").classList.add("on"), 1200);
+
+  //page4
+  //swiper
   let idx = 0;
   const swiperSetting = {
     slidesPerView: 2,
     // 무한 루프
-    // autoplay: true,
+    autoplay: true,
     loop: true,
     loopAdditionalSlides: 1,
     //페이지를 로딩한 직후 작동
@@ -43,10 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     }
-  }
+  };
   const swiper = new Swiper('.swiper', swiperSetting);
 
-
+  //page5
   const faqBtn = document.querySelectorAll(".faq .btn");
   faqBtn.forEach((e) => {
     e.addEventListener("click", () => {

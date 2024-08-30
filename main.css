@@ -144,7 +144,8 @@ em {
     position: relative;
     opacity: 0;
     transform: translateX(-200px);
-    transition: 1.5s transform, opacity;
+    transition: 1.5s;
+    transition-property: transform, opacity;
     transition-delay: 0.5s;
   }
 
@@ -256,7 +257,8 @@ em {
     top: calc(50vh - 80px);
     opacity: 0;
     transform: translateY(-200px);
-    transition: 1.5s transform, opacity;
+    transition: 1.5s;
+    transition-property: transform, opacity;
     transition-delay: 0.7s;
   }
 
@@ -401,7 +403,8 @@ em {
     width: calc(100% - 80px);
     opacity: 0;
     transform: translateY(200px);
-    transition: 1s transform, opacity;
+    transition: 1s;
+    transition-property: transform, opacity;
     transition-delay: 0.7s;
   }
 
@@ -483,7 +486,8 @@ em {
     width: calc(100% - 700px);
     opacity: 0;
     transform: translateX(-200px);
-    transition: 1s transform, opacity;
+    transition: 1s;
+    transition-property: transform, opacity;
     transition-delay: 0.5s;
   }
 
@@ -505,7 +509,8 @@ em {
     bottom: calc(50% - 213px);
     opacity: 0;
     transform: translateX(200px);
-    transition: 1.5s transform, opacity;
+    transition: 1.5s;
+    transition-property: transform, opacity;
     transition-delay: 0.9s;
   }
 

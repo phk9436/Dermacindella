@@ -75,12 +75,12 @@ em {
 
   header {
     width: 100vw;
-    height: 80px;
+    height: 60px;
   }
 
   header ul.navi {
-    gap: 40px;
-    font-size: 20px;
+    gap: 30px;
+    font-size: 16px;
     color: #fff;
   }
 
@@ -103,9 +103,9 @@ em {
 
   section .contents {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 60px);
     padding: 0 40px;
-    margin-top: 80px;
+    margin-top: 60px;
     position: relative;
   }
 
@@ -113,7 +113,11 @@ em {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 85px;
+    padding: 0 40px;
+  }
+
+  header .logoWrapper img {
+    width: 140px;
   }
 
   section.section01 {
@@ -364,12 +368,12 @@ em {
 
   section.section03 .prdGrid {
     display: flex;
-    gap: 40px;
+    gap: 0;
     justify-content: space-between;
     align-items: center;
     position: absolute;
     bottom: 60px;
-    width: calc(100% - 170px);
+    width: calc(100% - 80px);
     opacity: 0;
     transform: translateY(200px);
     transition: 1s;
@@ -383,27 +387,27 @@ em {
 
   section.section03 .prdDesc {
     width: 100%;
-    max-width: 614px;
+    max-width: 510px;
     color: #fff;
   }
 
   section.section03 .prdDesc p {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 300;
-    line-height: 62px;
+    line-height: 1.4;
   }
 
   section.section03 .btnWrap {
     display: flex;
-    gap: 30px;
-    margin-top: 50px;
+    gap: 20px;
+    margin-top: 30px;
   }
 
   section.section03 .btnWrap a {
     border: 1px solid #fff;
-    padding-left: 80px;
-    font-size: 20px;
-    line-height: 60px;
+    padding-left: 74px;
+    font-size: 14px;
+    line-height: 3;
     font-weight: 300;
     width: 100%;
     position: relative;
@@ -412,11 +416,11 @@ em {
   section.section03 .btnWrap a::before {
     content: '';
     display: block;
-    width: 30px;
+    width: 20px;
     aspect-ratio: 1;
     position: absolute;
-    left: 20px;
-    top: 15px;
+    left: 12px;
+    top: 12px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -431,13 +435,13 @@ em {
   }
 
   section.section03 .prdDesc em {
-    font-size: 56px;
+    font-size: 40px;
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
   }
 
   section.section03 .prdImg img {
-    max-height: calc(100vh - 260px);
+    max-height: calc(100vh - 200px);
   }
 
   section.section04 p {
@@ -713,8 +717,8 @@ em {
 
   .sectionBg .bgCont {
     width: 100%;
-    height: calc(100% - 80px);
-    margin-top: 80px;
+    height: calc(100% - 60px);
+    margin-top: 60px;
     background-image: url("./images/main3.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -734,8 +738,32 @@ em {
 
 @media screen and (min-width: 1440px) {
 
+  header {
+    height: 80px;
+  }
+
+  header .logoWrapper img {
+    width: 184px;
+  }
+
+  header ul.navi {
+    gap: 40px;
+    font-size: 20px;
+  }
+
+  header .contents {
+    padding: 0 85px;
+  }
+
   section .contents {
     padding: 0 85px;
+    height: calc(100vh - 80px);
+    margin-top: 80px;
+  }
+
+  .sectionBg .bgCont {
+    height: calc(100% - 80px);
+    margin-top: 80px;
   }
 
   section.section01 p:nth-of-type(1) {
@@ -829,6 +857,44 @@ em {
 
   section.section02 .cardDesc dl {
     grid-template-columns: 171px 444px;
+  }
+
+  section.section03 .prdGrid {
+    width: calc(100% - 170px);
+    gap: 40px;
+  }
+
+  section.section03 .prdDesc {
+    max-width: 614px;
+  }
+
+  section.section03 .prdDesc em {
+    font-size: 56px;
+    margin-bottom: 30px;
+  }
+
+  section.section03 .prdDesc p {
+    font-size: 40px;
+  }
+
+  section.section03 .btnWrap {
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  section.section03 .btnWrap a {
+    font-size: 20px;
+    padding-left: 80px;
+  }
+
+  section.section03 .btnWrap a::before {
+    width: 30px;
+    left: 20px;
+    top: 15px;
+  }
+
+  section.section03 .prdImg img {
+    max-height: calc(100vh - 260px);
   }
 
   .faq {

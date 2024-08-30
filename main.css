@@ -144,7 +144,7 @@ em {
     position: relative;
     opacity: 0;
     transform: translateX(-200px);
-    transition: 1.5s;
+    transition: 1.5s transform, opacity;
     transition-delay: 0.5s;
   }
 
@@ -256,7 +256,7 @@ em {
     top: calc(50vh - 80px);
     opacity: 0;
     transform: translateY(-200px);
-    transition: 1.5s;
+    transition: 1.5s transform, opacity;
     transition-delay: 0.7s;
   }
 
@@ -285,7 +285,7 @@ em {
     right: 40px;
     top: 60px;
     transform: translateY(calc(100vh - 160px));
-    transition: 1.5s;
+    transition: 1.5s transform;
     transition-delay: 1s;
   }
 
@@ -401,7 +401,7 @@ em {
     width: calc(100% - 80px);
     opacity: 0;
     transform: translateY(200px);
-    transition: 1s;
+    transition: 1s transform, opacity;
     transition-delay: 0.7s;
   }
 
@@ -483,7 +483,7 @@ em {
     width: calc(100% - 700px);
     opacity: 0;
     transform: translateX(-200px);
-    transition: 1s;
+    transition: 1s transform, opacity;
     transition-delay: 0.5s;
   }
 
@@ -505,7 +505,7 @@ em {
     bottom: calc(50% - 213px);
     opacity: 0;
     transform: translateX(200px);
-    transition: 1.5s;
+    transition: 1.5s transform, opacity;
     transition-delay: 0.9s;
   }
 
@@ -522,9 +522,6 @@ em {
     width: 100%;
   }
 
-  section.section04 .swiper .swiper-slide img {
-    transition: 0.5s filter;
-  }
   section.section04 .swiper .swiper-slide:not(.swiper-slide-active) img{
     filter: brightness(0.8);
   }
@@ -575,7 +572,7 @@ em {
     width: calc(50% - 40px);
     height: 100%;
     opacity: 0;
-    transition: 1s;
+    transition: 1s opacity;
     transition-delay: 0.7s;
   }
 
@@ -604,7 +601,7 @@ em {
     right: 40px;
     color: #101820;
     opacity: 0;
-    transition: 1s;
+    transition: 1s opacity;
     transition-delay: 1s;
   }
 

@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  const docWidth = document.querySelector("body").getBoundingClientRect().width;
-  console.log(docWidth)
-
+  let docWidth = document.querySelector("body").getBoundingClientRect().width;
   //fullpage
   const fullpageSetting = {
     anchors: ['section01', 'section02', 'section03','section04', 'section05'],
@@ -58,11 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
           })
         }
       }
-    }
+    },
+    scrollOverflow: true,
   };
+  let swiper;
   const callSwiper = () => {
     if(docWidth >= 1440) {
-      const swiper = new Swiper('.swiper', {
+      swiper = new Swiper('.swiper', {
         ...swiperSetting, 
         effect: 'coverflow',
         coverflowEffect: {
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
     if(docWidth >= 1000) {
-      const swiper = new Swiper('.swiper', {
+      swiper = new Swiper('.swiper', {
         ...swiperSetting, 
         effect: 'coverflow',
         coverflowEffect: {
@@ -88,6 +88,11 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
   callSwiper();
+  window.addEventListener("resize", () => {
+    docWidth = document.querySelector("body").getBoundingClientRect().width;
+    swiper.destroy();
+    callSwiper();
+  });
 
   //page5
   const faqBtn = document.querySelectorAll(".faq .btn");

@@ -123,7 +123,7 @@ em {
   section.section01 {
     background-image: url("./images/main1_off.jpg");
     background-position: left center;
-    transition: 1.5s background-image;
+    transition: 2s background-image;
   }
 
   section.section01.on {
@@ -142,6 +142,15 @@ em {
     display: flex;
     flex-direction: column;
     position: relative;
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: 1.5s;
+    transition-delay: 0.5s;
+  }
+
+  section.section01.on .desc {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   section.section01 p:nth-of-type(1) {
@@ -228,7 +237,7 @@ em {
   section.section02 {
     background-image: url("./images/main2_off.png");
     background-attachment: fixed;
-    transition: 1s background-image;
+    transition: 2s background-image;
     transition-delay: 0.5s;
   }
 
@@ -245,6 +254,15 @@ em {
   section.section02 .desc {
     position: sticky;
     top: calc(50vh - 80px);
+    opacity: 0;
+    transform: translateY(-200px);
+    transition: 1.5s;
+    transition-delay: 0.7s;
+  }
+
+  section.section02.on .desc {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   section.section02 .desc p {
@@ -266,6 +284,13 @@ em {
     position: absolute;
     right: 40px;
     top: 60px;
+    transform: translateY(calc(100vh - 160px));
+    transition: 1.5s;
+    transition-delay: 1s;
+  }
+
+  section.section02.on .cards {
+    transform: translateY(0);
   }
 
   section.section02 .cardTop {
@@ -456,6 +481,15 @@ em {
     position: absolute;
     bottom: calc(50% - 80px);
     width: calc(100% - 700px);
+    opacity: 0;
+    transform: translateX(-200px);
+    transition: 1s;
+    transition-delay: 0.5s;
+  }
+
+  section.section04.on p {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   section.section04 em {
@@ -469,6 +503,15 @@ em {
     position: absolute;
     right: 40px;
     bottom: calc(50% - 213px);
+    opacity: 0;
+    transform: translateX(200px);
+    transition: 1.5s;
+    transition-delay: 0.9s;
+  }
+
+  section.section04.on .swiperWrap {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   section.section04 .swiper {
@@ -531,6 +574,13 @@ em {
     left: 40px;
     width: calc(50% - 40px);
     height: 100%;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 0.7s;
+  }
+
+  section.section05.on :where(.prdWrap, .faq) {
+    opacity: 1;
   }
 
   section.section05 .prd {
@@ -553,6 +603,9 @@ em {
     transform: translateY(50%);
     right: 40px;
     color: #101820;
+    opacity: 0;
+    transition: 1s;
+    transition-delay: 1s;
   }
 
   .faq h2 {
@@ -704,10 +757,11 @@ em {
     top: calc(50% - 5px);
     right: 0;
     cursor: pointer;
+    transform: rotate(180deg);
   }
 
   footer nav p.on::after {
-    transform: rotate(180deg);
+    transform: rotate(0);
   }
 
   footer li::after {

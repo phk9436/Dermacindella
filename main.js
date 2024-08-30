@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+  const docWidth = document.querySelector("body").getBoundingClientRect().width;
+  console.log(docWidth)
+
   //fullpage
   const fullpageSetting = {
     anchors: ['section01', 'section02', 'section03','section04', 'section05'],
@@ -25,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //page4
   //swiper
-  let idx = 0;
   const swiperSetting = {
     slidesPerView: 2,
     // 무한 루프
@@ -44,13 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
       nextEl: ".swiperArrowNext",
       prevEl: ".swiperArrowPrev",
     },
-    effect: 'coverflow',
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 30,
-      modifier: 2.83,
-      slideShadows: false
-    },
     centeredSlides: true,
     on: {
       slideChangeTransitionStart: function () {
@@ -65,7 +60,34 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   };
-  const swiper = new Swiper('.swiper', swiperSetting);
+  const callSwiper = () => {
+    if(docWidth >= 1440) {
+      const swiper = new Swiper('.swiper', {
+        ...swiperSetting, 
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 30,
+          modifier: 2.83,
+          slideShadows: false
+        },
+      });
+      return;
+    }
+    if(docWidth >= 1000) {
+      const swiper = new Swiper('.swiper', {
+        ...swiperSetting, 
+        effect: 'coverflow',
+        coverflowEffect: {
+          rotate: 0,
+          stretch: 30,
+          modifier: 2.6,
+          slideShadows: false
+        },
+      });
+    }
+  }
+  callSwiper();
 
   //page5
   const faqBtn = document.querySelectorAll(".faq .btn");

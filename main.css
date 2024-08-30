@@ -445,25 +445,25 @@ em {
   }
 
   section.section04 p {
-    font-size: 40px;
-    line-height: 62px;
+    font-size: 30px;
+    line-height: 1.4;
     font-weight: 300;
     position: absolute;
-    bottom: calc(50% - 107px);
-    width: calc(100% - 800px);
+    bottom: calc(50% - 80px);
+    width: calc(100% - 700px);
   }
 
   section.section04 em {
-    font-size: 56px;
+    font-size: 40px;
     display: inline-block;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   section.section04 .swiperWrap {
-    width: 650px;
+    width: 550px;
     position: absolute;
-    right: 60px;
-    bottom: calc(50% - 248px);
+    right: 40px;
+    bottom: calc(50% - 213px);
   }
 
   section.section04 .swiper {
@@ -895,6 +895,23 @@ em {
 
   section.section03 .prdImg img {
     max-height: calc(100vh - 260px);
+  }
+
+  section.section04 p {
+    font-size: 40px;
+    width: calc(100% - 800px);
+    bottom: calc(50% - 107px);
+  }
+
+  section.section04 em {
+    font-size: 56px;
+    margin-bottom: 30px;
+  }
+
+  section.section04 .swiperWrap {
+    width: 650px;
+    right: 60px;
+    bottom: calc(50% - 248px);
   }
 
   .faq {

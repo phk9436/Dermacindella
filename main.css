@@ -411,6 +411,11 @@ em {
     font-weight: 300;
     width: 100%;
     position: relative;
+    transition: 0.1s background-color;
+  }
+
+  section.section03 .btnWrap a:hover{
+    background-color: rgba(255, 255, 255, 0.1);
   }
 
   section.section03 .btnWrap a::before {
@@ -504,7 +509,7 @@ em {
     height: 26px;
     background: url("./images/Arrow.png") no-repeat center/cover;
     position: absolute;
-    top: calc(220px);
+    top: 190px;
     z-index: 10;
     cursor: pointer;
   }
@@ -920,6 +925,10 @@ em {
     width: 650px;
     right: 60px;
     bottom: calc(50% - 248px);
+  }
+
+  section.section04 .swiperArrow {
+    top: 220px;
   }
 
   section.section05 .prdWrap {

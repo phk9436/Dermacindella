@@ -523,9 +523,10 @@ em {
   section.section05 .prd {
     position: absolute;
     bottom: calc(50% + 20px);
-    transform: translate(-100%, 50%);
-    left: calc(50% - 60px);
+    transform: translate(0, 50%);
+    left: 40px;
     width: 50vh;
+    max-width: 556px;
   }
 
   section.section05 .prd img {
@@ -735,7 +736,6 @@ em {
   }
 }
 
-
 @media screen and (min-width: 1440px) {
 
   header {
@@ -912,6 +912,10 @@ em {
     width: 650px;
     right: 60px;
     bottom: calc(50% - 248px);
+  }
+
+  section.section05 .prd {
+    left: 85px;
   }
 
   .faq {

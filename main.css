@@ -954,6 +954,11 @@ em {
   .faq dd.on:nth-of-type(2) {
     height: 50px;
   }
+
+  footer .contents {
+    height: 100%;
+    margin: 0 auto;
+  }
 }
 
 .fp-watermark {

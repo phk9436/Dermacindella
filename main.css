@@ -1431,7 +1431,7 @@ footer li::after {
 
   section.section03 .prdImg {
     margin: auto;
-    width: 40vh;
+    height: 40vh;
     margin-top: 4vh;
     margin-bottom: 0;
   }

@@ -3,20 +3,51 @@ document.addEventListener("DOMContentLoaded", () => {
   let docWidth = document.querySelector("body").getBoundingClientRect().width;
   //fullpage
   const fullpageSetting = {
-    anchors: ['section01', 'section02', 'section03','section04', 'section05'],
+    anchors: ['section01', 'section02', 'section03', 'section04', 'section05'],
     menu: ".navi",
-    onLeave: function(origin, destination) {
+    onLeave: function (origin, destination) {
       document.querySelectorAll(".section")[destination.index].classList.add("on");
-      if(destination.index === 2) {
+      if (destination.index === 2) {
         document.querySelector(".sectionBg").classList.remove("on");
       }
-      if(destination.index === 3) {
+      if (destination.index === 3) {
         document.querySelector(".sectionBg").classList.add("on");
       }
+    },
+    afterRender: function() {
+      // console.log("render")
+      // const scrollable = document.querySelector('.section02 .fp-overflow');
+      // console.log(scrollable)
+      // let scrollSpeed = 0;
+    
+      // // 스크롤 이벤트 리스너 추가
+      // scrollable.addEventListener('wheel', function (event) {
+      //   event.preventDefault(); // 기본 스크롤 방지
+    
+      //   // 가속도 적용
+      //   scrollSpeed += event.deltaY * 0.5; // 0.1은 가속도 조절 값
+      //   scrollable.scrollTop += scrollSpeed;
+      //   console.log(scrollable.scrollTop)
+      //   // 감속 처리
+      //   scrollSpeed *= 0.95; // 감속 비율
+      // });
     }
   };
-  new fullpage("#fullpage", fullpageSetting);
-
+  let isfullpage = false;
+  const setFullpage = () => {
+    if(docWidth < 900) {
+      fullpage_api.destroy("all");
+      isfullpage = false;
+      return;
+    }
+    isfullpage || new fullpage("#fullpage", fullpageSetting);
+    isfullpage = true;
+  }
+  setFullpage();
+  window.addEventListener("resize", () => {
+    docWidth = document.querySelector("body").getBoundingClientRect().width;
+    setFullpage();
+  });
 
   //page1
   const sect = document.querySelectorAll("section");
@@ -48,11 +79,11 @@ document.addEventListener("DOMContentLoaded", () => {
     on: {
       slideChangeTransitionStart: function () {
         const { realIndex } = this;
-        if(realIndex >= 4) {
+        if (realIndex >= 4) {
           const idx = realIndex - 4;
           document.querySelectorAll(".swiper-pagination-bullet").forEach((e, i) => {
             e.classList.remove("swiper-pagination-bullet-active");
-            if(i === idx) e.classList.add("swiper-pagination-bullet-active");
+            if (i === idx) e.classList.add("swiper-pagination-bullet-active");
           })
         }
       }
@@ -60,10 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
     scrollOverflow: true,
   };
   let swiper;
-  const callSwiper = () => {
-    if(docWidth >= 1440) {
+  const setSwiper = () => {
+    if (docWidth >= 1440) {
       swiper = new Swiper('.swiper', {
-        ...swiperSetting, 
+        ...swiperSetting,
         effect: 'coverflow',
         coverflowEffect: {
           rotate: 0,
@@ -74,9 +105,9 @@ document.addEventListener("DOMContentLoaded", () => {
       });
       return;
     }
-    if(docWidth >= 1000) {
+    if (docWidth >= 1000) {
       swiper = new Swiper('.swiper', {
-        ...swiperSetting, 
+        ...swiperSetting,
         effect: 'coverflow',
         coverflowEffect: {
           rotate: 0,
@@ -87,11 +118,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   }
-  callSwiper();
+  setSwiper();
   window.addEventListener("resize", () => {
     docWidth = document.querySelector("body").getBoundingClientRect().width;
-    swiper.destroy();
-    callSwiper();
+    swiper && swiper.destroy();
+    setSwiper();
   });
 
   //page5
@@ -108,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     isNav = !isNav;
     e.target.classList.toggle("on");
     console.log(isNav)
-    if(isNav) {
+    if (isNav) {
       let lh = 0;
       document.querySelectorAll("footer nav li").forEach(() => {
         lh += 53;

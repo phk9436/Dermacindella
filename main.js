@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let isfullpage = false;
   const setFullpage = () => {
     if(docWidth < 900) {
+      if(typeof fullpage_api === "undefined") return;
       fullpage_api.destroy("all");
       isfullpage = false;
       return;

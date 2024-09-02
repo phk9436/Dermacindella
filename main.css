@@ -301,6 +301,64 @@ section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
   background-color: #101820;
 }
 
+section.section05 {
+  background-color: #ebeff0;
+}
+
+
+section.section05 .prd img {
+  width: 100%;
+}
+
+.faq dl {
+  border-top: 1px solid #000;
+}
+
+footer nav {
+  background-color: #122231;
+  color: #fff;
+  font-weight: 300;
+  position: relative;
+}
+
+footer nav a {
+  width: 100%;
+  display: block;
+}
+
+footer ul {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  background-color: #122231;
+  transition: 0.5s height;
+  height: 0;
+  overflow: hidden;
+}
+
+footer li {
+  border-bottom: 1px solid #fff;
+  position: relative;
+}
+
+footer li::after,
+footer nav p::after {
+  content: '';
+  display: block;
+  right: 0;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+footer nav p.on::after {
+  transform: rotate(0);
+}
+
+footer li::after {
+  transform: rotate(270deg);
+}
+
+
 @media screen and (min-width: 450px) {
 
   .mo {
@@ -650,10 +708,6 @@ section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
     right: 100px;
   }
 
-  section.section05 {
-    background-color: #ebeff0;
-  }
-
   section.section05 .prdWrap {
     position: absolute;
     top: 0;
@@ -676,10 +730,6 @@ section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
     left: 50%;
     width: 50vh;
     max-width: 556px;
-  }
-
-  section.section05 .prd img {
-    width: 100%;
   }
 
   .faq {
@@ -706,7 +756,6 @@ section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
   }
 
   .faq dl {
-    border-top: 1px solid #000;
     margin-top: 20px;
   }
 
@@ -791,13 +840,9 @@ section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
   }
 
   footer nav {
-    background-color: #122231;
     padding: 0 16px;
     width: 288px;
     font-size: 18px;
-    color: #fff;
-    font-weight: 300;
-    position: relative;
   }
 
   footer nav p,
@@ -806,52 +851,18 @@ section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
     padding: 16px 0;
   }
 
-  footer nav a {
-    width: 100%;
-    display: block;
-  }
-
   footer ul {
-    position: absolute;
-    width: 100%;
     bottom: 53px;
-    left: 0;
     padding: 0 16px;
-    background-color: #122231;
-    transition: 0.5s height;
-    height: 0;
-    overflow: hidden;
-  }
-
-  footer li {
-    padding: 16px 0;
-    position: relative;
-  }
-
-  footer li {
-    border-bottom: 1px solid #fff;
   }
 
   footer li::after,
   footer nav p::after {
-    content: '';
-    display: block;
     width: 20px;
     height: 10px;
     background: url("./images/footerArrow.png") no-repeat center/cover;
     position: absolute;
     top: calc(50% - 5px);
-    right: 0;
-    cursor: pointer;
-    transform: rotate(180deg);
-  }
-
-  footer nav p.on::after {
-    transform: rotate(0);
-  }
-
-  footer li::after {
-    transform: rotate(270deg);
   }
 
   footer .contents>p {
@@ -1149,26 +1160,12 @@ section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
     display: none;
   }
 
-  body {
-    overflow-x: hidden;
-  }
-
-  section {
-    overflow: hidden;
-    width: 100vw;
-  }
-
-  * {
-    max-width: 100vw;
-  }
-
   header {
     height: 70px;
   }
 
-  section .contents {
+  section>.contents {
     padding: 0 20px;
-    overflow: hidden;
   }
 
   header ul.navi {
@@ -1436,6 +1433,94 @@ section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
     width: 1.4vh;
     height: 1.4vh;
     margin: 0 1vh !important;
+  }
+
+  section.section05 {
+    height: auto;
+  }
+
+  section.section05>.contents {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  section.section05 .prd {
+    width: calc(100% - 40px);
+    margin: auto;
+    margin-top: 6vh;
+  }
+
+  .faq {
+    margin-top: calc(12vh + 70px);
+  }
+
+  .faq h2 {
+    font-size: 6vh;
+    margin-bottom: 3vh;
+  }
+
+  .faq h3 {
+    font-size: 2.3vh;
+    font-weight: 400;
+  }
+
+  .faq dl {
+    margin-top: 3vh;
+    line-height: 1.5;
+  }
+
+  .faq dt {
+    padding: 2vh 0;
+    font-size: 2.3vh;
+    font-weight: 700;
+  }
+
+  .faq dd {
+    border-bottom: 1px solid #000;
+    padding-bottom: 2vh;
+  }
+
+  footer {
+    background-color: #101820;
+    padding: 20px 20px 40px;
+    color: #fff;
+    margin-top: 2rem;
+  }
+
+  footer img {
+    width: 130px;
+  }
+
+  footer nav {
+    padding: 0 8px;
+    font-size: 14px;
+    margin: 3vh 0
+  }
+
+  footer nav p,
+  footer li {
+    position: relative;
+    padding: 10px 0;
+  }
+
+  footer ul {
+    bottom:  calc(2vh + 18px);
+    padding: 0 8px;
+  }
+
+  footer li::after,
+  footer nav p::after {
+    background: url("./images/footerArrow.png") no-repeat center/cover;
+    position: absolute;
+    width: 16px;
+    height: 8px;
+    top: calc(50% - 4px);
+  }
+
+  footer .contents>p {
+    font-size: 1.8vh;
+    line-height: 1.5;
+    font-weight: 300;
   }
 
 }

@@ -124,7 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
       effect: 'cube'
     });
   }
-  
+
   setSwiper();
   window.addEventListener("resize", () => {
     docWidth = document.querySelector("body").getBoundingClientRect().width;
@@ -149,7 +149,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (isNav) {
       let lh = 0;
       document.querySelectorAll("footer nav li").forEach(() => {
-        lh += 53;
+        lh += docWidth >= 450 ? 53 : 39;
       });
       document.querySelector("footer ul").style.height = `${lh}px`;
     } else {

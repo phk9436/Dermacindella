@@ -361,6 +361,50 @@ section.section05 .prd img {
   transition: 1s opacity;
 }
 
+.faq dt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.faq .btn {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+  cursor: pointer;
+}
+
+.faq dd {
+  border-bottom: 1px solid #000;
+  padding-bottom: 0;
+  height: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.faq .btn::before,
+.faq .btn::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.faq .btn::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: 0.5s;
+}
+
+.faq .btn.on::after {
+  opacity: 0;
+}
+
 section.section05 .prdWrap {
   opacity: 0;
   transition: 1s opacity;
@@ -717,7 +761,7 @@ footer li::after {
     bottom: calc(50% - 213px);
   }
 
-  
+
 
   section.section04 .swiper {
     overflow-y: visible;
@@ -800,21 +844,11 @@ footer li::after {
   .faq dt {
     padding: 20px 0;
     font-size: 20px;
-    font-weight: 700;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-right: 10px;
   }
 
   .faq dd {
-    border-bottom: 1px solid #000;
-    padding-bottom: 0;
-    height: 0;
-    overflow: hidden;
     font-size: 14px;
-    font-weight: 300;
-    transition: 0.5s;
   }
 
   .faq dd.on {
@@ -831,34 +865,11 @@ footer li::after {
 
   .faq .btn {
     width: 24px;
-    aspect-ratio: 1;
-    border-radius: 50%;
-    border: 1px solid #000;
-    position: relative;
-    cursor: pointer;
   }
 
   .faq .btn::before,
   .faq .btn::after {
-    content: '';
-    display: block;
     width: 12px;
-    height: 1px;
-    background-color: #000;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-
-  .faq .btn::after {
-    transform: translate(-50%, -50%) rotate(90deg);
-    transition: 0.5s;
-  }
-
-
-  .faq .btn.on::after {
-    opacity: 0;
   }
 
   footer {
@@ -1423,10 +1434,11 @@ footer li::after {
   }
 
   section.section04 .contents {
-    height: 100vh;
+    height: calc(100vh - 70px);
+    margin-top: 70px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
   }
 
   section.section04 p {
@@ -1444,7 +1456,7 @@ footer li::after {
 
   section.section04 .swiperWrap {
     width: calc(100% - 80px);
-    margin: 6vh auto calc(20vh - 70px);
+    margin: 6vh auto 0;
   }
 
   section.section04 .swiperBtnWrapper {
@@ -1469,10 +1481,10 @@ footer li::after {
   section.section05 .prd {
     width: calc(100% - 40px);
     margin: auto;
-    margin-top: 6vh;
+    margin-top: 14vh;
   }
 
-  section.section05 .prdWrap{
+  section.section05 .prdWrap {
     transition-delay: 1s;
   }
 
@@ -1499,12 +1511,29 @@ footer li::after {
   .faq dt {
     padding: 2vh 0;
     font-size: 2.3vh;
-    font-weight: 700;
   }
 
   .faq dd {
-    border-bottom: 1px solid #000;
+    font-size: 1.8vh;
+  }
+
+  .faq dd.on:first-of-type {
+    height: 13vh;
     padding-bottom: 2vh;
+  }
+
+  .faq dd.on:nth-of-type(2) {
+    height: 5vh;
+    padding-bottom: 2vh;
+  }
+
+  .faq .btn {
+    width: 2vh;
+  }
+
+  .faq .btn::before,
+  .faq .btn::after {
+    width: 1vh;
   }
 
   footer {
@@ -1531,7 +1560,7 @@ footer li::after {
   }
 
   footer ul {
-    bottom:  calc(2vh + 18px);
+    bottom: calc(2vh + 18px);
     padding: 0 8px;
   }
 

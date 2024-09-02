@@ -7,6 +7,11 @@ document.addEventListener("DOMContentLoaded", () => {
     menu: ".navi",
     onLeave: function (origin, destination) {
       document.querySelectorAll(".section")[destination.index].classList.add("on");
+
+      let navIdx = destination.index === 0 ? 0 : destination.index - 1;
+      document.querySelectorAll(".navi li").forEach((e) => e.classList.remove("on"));
+      document.querySelectorAll(".navi li")[navIdx].classList.add("on");
+
       if (destination.index === 2) {
         document.querySelector(".sectionBg").classList.remove("on");
       }
@@ -14,23 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelector(".sectionBg").classList.add("on");
       }
     },
-    afterRender: function() {
-      // console.log("render")
-      // const scrollable = document.querySelector('.section02 .fp-overflow');
-      // console.log(scrollable)
-      // let scrollSpeed = 0;
-    
-      // // 스크롤 이벤트 리스너 추가
-      // scrollable.addEventListener('wheel', function (event) {
-      //   event.preventDefault(); // 기본 스크롤 방지
-    
-      //   // 가속도 적용
-      //   scrollSpeed += event.deltaY * 0.5; // 0.1은 가속도 조절 값
-      //   scrollable.scrollTop += scrollSpeed;
-      //   console.log(scrollable.scrollTop)
-      //   // 감속 처리
-      //   scrollSpeed *= 0.95; // 감속 비율
-      // });
+    afterLoad: function(origin, destination) {
+      let navIdx = destination.index === 0 ? 0 : destination.index - 1;
+      document.querySelectorAll(".navi li").forEach((e) => e.classList.remove("on"));
+      document.querySelectorAll(".navi li")[navIdx].classList.add("on");
     }
   };
   new fullpage("#fullpage", fullpageSetting);

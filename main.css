@@ -77,6 +77,10 @@ section {
   background-size: cover;
 }
 
+section:not(.section02) {
+  height: 100vh;
+}
+
 section.section01 .desc {
   opacity: 0;
   transition: 1.5s;
@@ -269,6 +273,34 @@ section.section03 .btnWrap a:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+section.section04 p {
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+section.section04 .swiper img {
+  width: 100%;
+}
+
+section.section04 .swiperBtnWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+section.section04 .swiperBtnWrapper span {
+  background-color: #d9d9d9;
+  opacity: 1;
+}
+
+section.section04 .swiperBtnWrapper span:where(:nth-child(5), :nth-child(6), :nth-child(7), :nth-child(8)) {
+  display: none;
+}
+
+
+section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
+  background-color: #101820;
+}
+
 @media screen and (min-width: 450px) {
 
   .mo {
@@ -283,10 +315,6 @@ section.section03 .btnWrap a:hover {
     gap: 30px;
     font-size: 16px;
     color: #fff;
-  }
-
-  section:not(.section02) {
-    height: 100vh;
   }
 
   .contents {
@@ -545,8 +573,6 @@ section.section03 .btnWrap a:hover {
 
   section.section04 p {
     font-size: 30px;
-    line-height: 1.4;
-    font-weight: 300;
     position: absolute;
     bottom: calc(50% - 80px);
     width: calc(100% - 700px);
@@ -589,35 +615,21 @@ section.section03 .btnWrap a:hover {
     overflow-y: visible;
   }
 
-  section.section04 .swiper img {
-    width: 100%;
-  }
-
   section.section04 .swiper .swiper-slide:not(.swiper-slide-active) img {
     filter: brightness(0.8);
   }
 
   section.section04 .swiperBtnWrapper {
-    display: flex;
-    justify-content: center;
     margin-top: 24px;
-  }
-
-  section.section04 .swiperBtnWrapper span:where(:nth-child(5), :nth-child(6), :nth-child(7), :nth-child(8)) {
-    display: none;
   }
 
   section.section04 .swiperBtnWrapper span {
     width: 10px;
     height: 10px;
-    background-color: #d9d9d9;
-    opacity: 1;
     margin: 0 10px !important;
   }
 
-  section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
-    background-color: #101820;
-  }
+
 
   section.section04 .swiperArrow {
     width: 13px;
@@ -1156,7 +1168,6 @@ section.section03 .btnWrap a:hover {
 
   section .contents {
     padding: 0 20px;
-    width: 100vh;
     overflow: hidden;
   }
 
@@ -1189,7 +1200,6 @@ section.section03 .btnWrap a:hover {
 
   section.section01 {
     background-image: url("./images/main1_off_m.jpg");
-    height: 100vh;
     transition: 2s background-image;
     overflow: hidden;
   }
@@ -1338,7 +1348,6 @@ section.section03 .btnWrap a:hover {
   }
 
   section.section03 {
-    height: 100vh;
     background-image: url("./images/main3_m.png");
   }
 
@@ -1391,6 +1400,42 @@ section.section03 .btnWrap a:hover {
 
   section.section03 .prdImg img {
     width: 100%;
+  }
+
+  section.section04 {
+    background-image: url("./images/main4_m.png");
+  }
+
+  section.section04 .contents {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  section.section04 p {
+    font-size: 2.5vh;
+  }
+
+  section.section04 em {
+    font-size: 4.5vh;
+    display: inline-block;
+    margin-bottom: 2vh;
+  }
+
+  section.section04 .swiperWrap {
+    width: calc(100% - 80px);
+    margin: 6vh auto calc(20vh - 70px);
+  }
+
+  section.section04 .swiperBtnWrapper {
+    margin-top: 2vh;
+  }
+
+  section.section04 .swiperBtnWrapper span {
+    width: 1.4vh;
+    height: 1.4vh;
+    margin: 0 1vh !important;
   }
 
 }

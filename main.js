@@ -117,8 +117,14 @@ document.addEventListener("DOMContentLoaded", () => {
           slideShadows: false
         },
       });
+      return;
     }
+    swiper = new Swiper('.swiper', {
+      ...swiperSetting,
+      effect: 'cube'
+    });
   }
+  
   setSwiper();
   window.addEventListener("resize", () => {
     docWidth = document.querySelector("body").getBoundingClientRect().width;

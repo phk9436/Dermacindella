@@ -338,6 +338,10 @@ section.section04 .swiperBtnWrapper span:where(:nth-child(5), :nth-child(6), :nt
   display: none;
 }
 
+section.section04 .swiper .swiper-slide:not(.swiper-slide-active) img {
+  filter: brightness(0.8);
+}
+
 
 section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
   background-color: #101820;
@@ -717,10 +721,6 @@ footer li::after {
 
   section.section04 .swiper {
     overflow-y: visible;
-  }
-
-  section.section04 .swiper .swiper-slide:not(.swiper-slide-active) img {
-    filter: brightness(0.8);
   }
 
   section.section04 .swiperBtnWrapper {

@@ -98,7 +98,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     swiper = new Swiper('.swiper', {
       ...swiperSetting,
-      effect: 'cube'
+      effect: 'cube',
+      cubeEffect: {
+        slideShadows: false
+      }
     });
   }
 

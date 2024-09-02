@@ -33,22 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // });
     }
   };
-  let isfullpage = false;
-  const setFullpage = () => {
-    if(docWidth < 450) {
-      if(typeof fullpage_api === "undefined") return;
-      fullpage_api.destroy("all");
-      isfullpage = false;
-      return;
-    }
-    isfullpage || new fullpage("#fullpage", fullpageSetting);
-    isfullpage = true;
-  }
-  setFullpage();
-  window.addEventListener("resize", () => {
-    docWidth = document.querySelector("body").getBoundingClientRect().width;
-    setFullpage();
-  });
+  new fullpage("#fullpage", fullpageSetting);
 
   //page1
   const sect = document.querySelectorAll("section");

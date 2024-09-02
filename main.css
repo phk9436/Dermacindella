@@ -151,8 +151,18 @@ section.section01 .waves .wave:nth-child(3) {
   }
 }
 
+section.section02 .desc {
+
+  opacity: 0;
+  transform: translateY(-200px);
+  transition: 1.5s;
+  transition-property: transform, opacity;
+  transition-delay: 0.7s;
+}
+
 section.section02.on .desc {
   opacity: 1;
+  transform: translateY(0);
 }
 
 section.section02 .desc p {
@@ -164,6 +174,7 @@ section.section02 .desc p {
 section.section02 .cards {
   transition: 1.5s transform;
   transition-delay: 1s;
+  transform: translateY(calc(100vh - 160px));
 }
 
 section.section02.on .cards {
@@ -235,6 +246,17 @@ section.section02 .cardDesc dt::after {
   right: 0;
 }
 
+section.section03 .prdGrid {
+  opacity: 0;
+  transition: 1s;
+  transition-property: transform, opacity;
+  transition-delay: 0.7s;
+}
+
+section.section03.on .prdGrid {
+  opacity: 1;
+}
+
 section.section03 .prdDesc p {
   line-height: 1.4;
   font-weight: 300;
@@ -276,6 +298,26 @@ section.section03 .btnWrap a:hover {
 section.section04 p {
   line-height: 1.4;
   font-weight: 300;
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+section.section04.on p {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+section.section04 .swiperWrap {
+  opacity: 0;
+  transform: translateX(200px);
+  transition: 1.5s;
+  transition-property: transform, opacity;
+  transition-delay: 0.9s;
+}
+
+section.section04.on .swiperWrap {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 section.section04 .swiper img {
@@ -308,6 +350,20 @@ section.section05 {
 
 section.section05 .prd img {
   width: 100%;
+}
+
+.faq {
+  opacity: 0;
+  transition: 1s opacity;
+}
+
+section.section05 .prdWrap {
+  opacity: 0;
+  transition: 1s opacity;
+}
+
+section.section05.on :where(.prdWrap, .faq) {
+  opacity: 1;
 }
 
 .faq dl {
@@ -356,6 +412,26 @@ footer nav p.on::after {
 
 footer li::after {
   transform: rotate(270deg);
+}
+
+.sectionBg {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+}
+
+.sectionBg .bgCont {
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 0.7s background-image;
+}
+
+#fullpage {
+  z-index: 1;
 }
 
 
@@ -481,15 +557,6 @@ footer li::after {
   section.section02 .desc {
     position: sticky;
     top: calc(50vh - 80px);
-    opacity: 0;
-    transform: translateY(-200px);
-    transition: 1.5s;
-    transition-property: transform, opacity;
-    transition-delay: 0.7s;
-  }
-
-  section.section02.on .desc {
-    transform: translateY(0);
   }
 
   section.section02 .desc p {
@@ -508,7 +575,6 @@ footer li::after {
     position: absolute;
     right: 40px;
     top: 60px;
-    transform: translateY(calc(100vh - 160px));
   }
 
   section.section02 .cardWrap:nth-child(2) {
@@ -579,15 +645,10 @@ footer li::after {
     position: absolute;
     bottom: 60px;
     width: calc(100% - 80px);
-    opacity: 0;
     transform: translateY(200px);
-    transition: 1s;
-    transition-property: transform, opacity;
-    transition-delay: 0.7s;
   }
 
   section.section03.on .prdGrid {
-    opacity: 1;
     transform: translateY(0);
   }
 
@@ -634,16 +695,9 @@ footer li::after {
     position: absolute;
     bottom: calc(50% - 80px);
     width: calc(100% - 700px);
-    opacity: 0;
     transform: translateX(-200px);
     transition: 1s;
-    transition-property: transform, opacity;
     transition-delay: 0.5s;
-  }
-
-  section.section04.on p {
-    opacity: 1;
-    transform: translateX(0);
   }
 
   section.section04 em {
@@ -657,17 +711,9 @@ footer li::after {
     position: absolute;
     right: 40px;
     bottom: calc(50% - 213px);
-    opacity: 0;
-    transform: translateX(200px);
-    transition: 1.5s;
-    transition-property: transform, opacity;
-    transition-delay: 0.9s;
   }
 
-  section.section04.on .swiperWrap {
-    opacity: 1;
-    transform: translateX(0);
-  }
+  
 
   section.section04 .swiper {
     overflow-y: visible;
@@ -714,13 +760,7 @@ footer li::after {
     left: 40px;
     width: calc(50% - 40px);
     height: 100%;
-    opacity: 0;
-    transition: 1s opacity;
     transition-delay: 0.7s;
-  }
-
-  section.section05.on :where(.prdWrap, .faq) {
-    opacity: 1;
   }
 
   section.section05 .prd {
@@ -739,8 +779,6 @@ footer li::after {
     transform: translateY(50%);
     right: 40px;
     color: #101820;
-    opacity: 0;
-    transition: 1s opacity;
     transition-delay: 1s;
   }
 
@@ -872,31 +910,14 @@ footer li::after {
     font-weight: 300;
   }
 
-  .sectionBg {
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-  }
-
   .sectionBg .bgCont {
-    width: 100%;
     height: calc(100% - 60px);
     margin-top: 60px;
     background-image: url("./images/main3.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    transition: 0.7s background-image;
   }
 
   .sectionBg.on .bgCont {
     background-image: url("./images/main4.png");
-  }
-
-  #fullpage {
-    z-index: 1;
   }
 }
 
@@ -1216,6 +1237,7 @@ footer li::after {
   section.section01 p:nth-of-type(1) {
     top: calc(50% - 36vh);
     width: 100%;
+    margin-left: -20px;
     text-align: center;
     font-size: 3.5vh;
     line-height: 1.5;
@@ -1344,15 +1366,16 @@ footer li::after {
     padding-bottom: 60px;
   }
 
-  section.section03 {
-    background-image: url("./images/main3_m.png");
-  }
-
   section.section03 .prdGrid {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     height: 100vh;
+    transform: translateX(-200px);
+  }
+
+  section.section03.on .prdGrid {
+    transform: translateX(0);
   }
 
   section.section03 .prdDesc {
@@ -1399,10 +1422,6 @@ footer li::after {
     width: 100%;
   }
 
-  section.section04 {
-    background-image: url("./images/main4_m.png");
-  }
-
   section.section04 .contents {
     height: 100vh;
     display: flex;
@@ -1412,6 +1431,9 @@ footer li::after {
 
   section.section04 p {
     font-size: 2.5vh;
+    transform: translateX(200px);
+    transition: 1.5s;
+    transition-delay: 0.9s;
   }
 
   section.section04 em {
@@ -1450,8 +1472,13 @@ footer li::after {
     margin-top: 6vh;
   }
 
+  section.section05 .prdWrap{
+    transition-delay: 1s;
+  }
+
   .faq {
     margin-top: calc(8vh + 70px);
+    transition-delay: 0.7s;
   }
 
   .faq h2 {
@@ -1526,6 +1553,15 @@ footer li::after {
     font-size: 1.8vh;
     line-height: 1.5;
     font-weight: 300;
+  }
+
+  .sectionBg .bgCont {
+    height: 100%;
+    background-image: url("./images/main3_m.png");
+  }
+
+  .sectionBg.on .bgCont {
+    background-image: url("./images/main4_m.png");
   }
 
 }

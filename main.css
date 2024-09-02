@@ -816,27 +816,31 @@ section {
 }
 
 @media screen and (min-height: 800px) {
-  section.section01 p:nth-of-type(1) {
-    margin-top: 112px;
-  }
 
-  section.section01 img {
-    margin-top: 111px;
+  @media screen and (min-width: 450px) {
+    section.section01 p:nth-of-type(1) {
+      margin-top: 112px;
+    }
+  
+    section.section01 img {
+      margin-top: 111px;
+    }
+  
+    section.section01 p:nth-of-type(2) {
+      padding: 20px 44px;
+      margin-bottom: 60px;
+    }
+  
+    section.section01 .desc {
+      max-height: 80vh;
+    }
+  
+    section.section01 .waves {
+      bottom: 85px;
+      left: calc(75% + 150px);
+    }
   }
-
-  section.section01 p:nth-of-type(2) {
-    padding: 20px 44px;
-    margin-bottom: 60px;
-  }
-
-  section.section01 .desc {
-    max-height: 80vh;
-  }
-
-  section.section01 .waves {
-    bottom: 85px;
-    left: calc(75% + 150px);
-  }
+  
 }
 
 @media screen and (min-width: 1440px) {

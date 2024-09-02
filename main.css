@@ -77,6 +77,159 @@ section {
   background-size: cover;
 }
 
+section.section01 .desc {
+  opacity: 0;
+  transition: 1.5s;
+  transition-delay: 0.5s;
+}
+
+section.section01.on .desc {
+  opacity: 1;
+}
+
+section.section01 p:nth-of-type(2) {
+  font-weight: 400;
+  color: #fff;
+  background-color: #101820;
+}
+
+section.section01 .waves {
+  position: absolute;
+  transform: translateY(-50%);
+  transition: 0.5s opacity;
+  opacity: 0;
+}
+
+section.section01 .waves.on {
+  opacity: 1;
+}
+
+section.section01 .waves .wave {
+  position: absolute;
+  border: 2px solid #fff;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  bottom: 0;
+  right: 0;
+  transform-origin: center;
+  opacity: 1;
+}
+
+section.section01 .waves.on .wave {
+  animation-name: wave;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+section.section01 .waves .wave:nth-child(1) {
+  animation-delay: 0s;
+}
+
+section.section01 .waves .wave:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+section.section01 .waves .wave:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+@keyframes wave {
+  0% {
+    transform: scale(1);
+    border-width: 2px;
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(2);
+    border-width: 1px;
+    opacity: 0;
+  }
+}
+
+section.section02.on .desc {
+  opacity: 1;
+}
+
+section.section02 .desc p {
+  font-weight: 300;
+  color: #fff;
+  line-height: 1.4;
+}
+
+section.section02 .cards {
+  transition: 1.5s transform;
+  transition-delay: 1s;
+}
+
+section.section02.on .cards {
+  transform: translateY(0);
+}
+
+section.section02 .cardTop {
+  display: flex;
+  justify-content: flex-end;
+}
+
+section.section02 .cardWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+section.section02 .card {
+  border: 1px solid #fff;
+  background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, 0.9) 70%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  backdrop-filter: blur(5px);
+}
+
+section.section02 .card p {
+  line-height: 1.5;
+  font-weight: 400;
+  color: #101820;
+}
+
+section.section02 .card em {
+  display: inline-block;
+  font-weight: 700;
+}
+
+section.section02 .card .imgWrap {
+  position: absolute;
+}
+
+section.section02 .card .imgWrap img {
+  width: 100%;
+}
+
+section.section02 .cardDesc {
+  border: 1px solid #fff;
+  color: #fff;
+  backdrop-filter: blur(20px);
+  line-height: 2;
+}
+
+section.section02 .cardDesc dl {
+  display: grid;
+}
+
+section.section02 .cardDesc dt {
+  text-align: right;
+  position: relative;
+  font-weight: 500;
+}
+
+section.section02 .cardDesc dt::after {
+  content: '';
+  display: block;
+  width: 1px;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+}
 
 @media screen and (min-width: 450px) {
 
@@ -145,15 +298,11 @@ section {
     display: flex;
     flex-direction: column;
     position: relative;
-    opacity: 0;
     transform: translateX(-200px);
-    transition: 1.5s;
     transition-property: transform, opacity;
-    transition-delay: 0.5s;
   }
 
   section.section01.on .desc {
-    opacity: 1;
     transform: translateX(0);
   }
 
@@ -172,70 +321,20 @@ section {
 
   section.section01 p:nth-of-type(2) {
     font-size: 14px;
-    font-weight: 400;
-    color: #fff;
     width: fit-content;
     padding: 14px 30px;
-    background-color: #101820;
     border-radius: 27px;
     margin-top: auto;
     margin-bottom: 40px;
   }
 
   section.section01 .waves {
-    position: absolute;
     left: calc(75% + 120px);
     bottom: 60px;
-    transition: 0.5s opacity;
-    opacity: 0;
-  }
-
-  section.section01 .waves.on {
-    opacity: 1;
   }
 
   section.section01 .waves .wave {
-    position: absolute;
-    border: 2px solid #fff;
-    aspect-ratio: 1;
-    border-radius: 50%;
     width: 60px;
-    bottom: 0;
-    right: 0;
-    transform-origin: center;
-    opacity: 1;
-  }
-
-  section.section01 .waves.on .wave {
-    animation-name: wave;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-  }
-
-  section.section01 .waves .wave:nth-child(1) {
-    animation-delay: 0s;
-  }
-
-  section.section01 .waves .wave:nth-child(2) {
-    animation-delay: 0.3s;
-  }
-
-  section.section01 .waves .wave:nth-child(3) {
-    animation-delay: 0.6s;
-  }
-
-  @keyframes wave {
-    0% {
-      transform: scale(1);
-      border-width: 2px;
-      opacity: 1;
-    }
-
-    100% {
-      transform: scale(2);
-      border-width: 1px;
-      opacity: 0;
-    }
   }
 
   section.section02 {
@@ -266,15 +365,11 @@ section {
   }
 
   section.section02.on .desc {
-    opacity: 1;
     transform: translateY(0);
   }
 
   section.section02 .desc p {
     font-size: 30px;
-    font-weight: 300;
-    color: #fff;
-    line-height: 1.4;
     width: 420px;
     max-width: calc(100% - 560px)
   }
@@ -290,101 +385,56 @@ section {
     right: 40px;
     top: 60px;
     transform: translateY(calc(100vh - 160px));
-    transition: 1.5s transform;
-    transition-delay: 1s;
-  }
-
-  section.section02.on .cards {
-    transform: translateY(0);
-  }
-
-  section.section02 .cardTop {
-    display: flex;
-    gap: 20px;
-    justify-content: flex-end;
-  }
-
-  section.section02 .cardWrap {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
   }
 
   section.section02 .cardWrap:nth-child(2) {
     margin-top: 127px;
   }
 
+  section.section02 :where(.cardTop, .cardWrap) {
+    gap: 20px;
+  }
+
   section.section02 .card {
     width: 250px;
     aspect-ratio: 288/400;
     border-radius: 18px;
-    border: 1px solid #fff;
-    background: linear-gradient(180deg, rgba(217, 217, 217, 0) 0%, rgba(217, 217, 217, 0.9) 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    position: relative;
     padding: 20px;
-    backdrop-filter: blur(5px);
   }
 
   section.section02 .card p {
     font-size: 22px;
-    line-height: 1.5;
-    font-weight: 400;
-    color: #101820;
   }
 
   section.section02 .card em {
-    display: inline-block;
     margin-bottom: 4px;
-    font-weight: 700;
     font-size: 40px;
   }
 
   section.section02 .card .imgWrap {
-    position: absolute;
     top: 4px;
     right: 4px;
     width: 80px;
   }
 
-  section.section02 .card .imgWrap img {
-    width: 100%;
-  }
-
   section.section02 .cardDesc {
-    border: 1px solid #fff;
     border-radius: 18px;
     padding: 10px;
     margin-top: 40px;
     font-size: 14px;
-    line-height: 2;
-    color: #fff;
-    backdrop-filter: blur(20px);
     width: 520px;
   }
 
   section.section02 .cardDesc dl {
-    display: grid;
     grid-template-columns: 140px 380px;
   }
 
   section.section02 .cardDesc dt {
-    text-align: right;
     padding-right: 20px;
-    font-weight: 500;
-    position: relative;
   }
 
   section.section02 .cardDesc dt::after {
-    content: '';
-    display: block;
     height: 12px;
-    width: 1px;
-    background-color: #fff;
-    position: absolute;
-    right: 0;
     top: calc(50% - 6px);
   }
 
@@ -821,26 +871,26 @@ section {
     section.section01 p:nth-of-type(1) {
       margin-top: 112px;
     }
-  
+
     section.section01 img {
       margin-top: 111px;
     }
-  
+
     section.section01 p:nth-of-type(2) {
       padding: 20px 44px;
       margin-bottom: 60px;
     }
-  
+
     section.section01 .desc {
       max-height: 80vh;
     }
-  
+
     section.section01 .waves {
       bottom: 85px;
       left: calc(75% + 150px);
     }
   }
-  
+
 }
 
 @media screen and (min-width: 1440px) {
@@ -884,9 +934,6 @@ section {
 
   section.section01 p:nth-of-type(2) {
     font-size: 16px;
-  }
-
-  section.section01 .desc {
   }
 
   section.section01 .waves .wave {
@@ -1078,12 +1125,23 @@ section {
     overflow-x: hidden;
   }
 
+  section {
+    overflow: hidden;
+    width: 100vw;
+  }
+
   * {
     max-width: 100vw;
   }
 
   header {
     height: 70px;
+  }
+
+  section .contents {
+    padding: 0 20px;
+    width: 100vh;
+    overflow: hidden;
   }
 
   header ul.navi {
@@ -1117,6 +1175,7 @@ section {
     background-image: url("./images/main1_off_m.jpg");
     height: 100vh;
     transition: 2s background-image;
+    overflow: hidden;
   }
 
   section.section01.on {
@@ -1124,14 +1183,7 @@ section {
   }
 
   section.section01 .desc {
-    opacity: 0;
-    transition: 1.5s;
     transition-property: opacity;
-    transition-delay: 0.5s;
-  }
-
-  section.section01.on .desc {
-    opacity: 1;
   }
 
   section.section01 :where(p, img) {
@@ -1142,7 +1194,7 @@ section {
     top: calc(50% - 36vh);
     width: 100%;
     text-align: center;
-    font-size: 3vh;
+    font-size: 3.5vh;
     line-height: 1.5;
     color: #fff;
   }
@@ -1165,15 +1217,110 @@ section {
     border-radius: 4vh;
     bottom: 20px;
     left: 20px;
-    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5vh;
     line-height: 1.5;
-    background-color: #101820;
     text-align: center;
   }
+
+  section.section01 .waves {
+    right: 5vh;
+    bottom: calc(50% - 20vh);
+  }
+
+  section.section01 .waves .wave {
+    width: 6vh;
+  }
+
+  section.section02 {
+    background-image: url("./images/main2_off_m.jpg");
+    background-attachment: fixed;
+    transition: 2s background-image;
+    transition-delay: 0.5s;
+  }
+
+  section.section02.on {
+    background-image: url("./images/main2_on_m.jpg");
+  }
+
+  section.section02 .desc p {
+    font-size: 2.5vh;
+    padding-top: 20vh;
+  }
+
+  section.section02 .desc em {
+    font-size: 4.5vh;
+    margin-bottom: 2vh;
+    display: inline-block;
+  }
+
+  section.section02 .cards {
+    margin-top: 12vh;
+  }
+
+  section.section02 :where(.card, .cardWrap) {
+    width: 100%;
+  }
+
+  section.section02 .card {
+    aspect-ratio: 129/184;
+    border-radius: 10px;
+    padding: 12px;
+  }
+
+  section.section02 .card p {
+    font-size: 2vh;
+  }
+
+  section.section02 .card em {
+    font-size: 3.5vh;
+    margin-bottom: 0.3vh;
+  }
+
+  section.section02 .card .imgWrap {
+    top: 0.6vh;
+    right: 0.6vh;
+    width: 8.5vh;
+  }
+
+  section.section02 .cardWrap:nth-child(2) {
+    margin-top: 14vh;
+  }
+
+  section.section02 .cardDesc {
+    border-radius: 10px;
+    padding: 18px 18px 18px 0;
+    margin-top: 60px;
+    font-size: 2vh;
+  }
+
+  section.section02 :where(.cardTop, .cardWrap) {
+    gap: 3vh;
+  }
+
+  section.section02 .cardDesc dl {
+    grid-template-columns: 80px calc(100% - 80px);
+  }
+
+  section.section02 .cardDesc dt {
+    padding-right: 10px;
+  }
+
+  section.section02 .cardDesc dt::after {
+    height: 1.5vh;
+    top: calc(0.75vh + 4px);
+  }
+
+  section.section02 .cardDesc dd {
+    padding-left: 10px;
+  }
+
+  section.section02 .contents {
+    padding-bottom: 60px;
+  }
+
 }
 
 .fp-watermark {

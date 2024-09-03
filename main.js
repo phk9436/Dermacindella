@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   new fullpage("#fullpage", fullpageSetting);
 
   //100vh 세팅
-  const setViewport = () => {
+  function setViewport() {
     const vh = window.innerHeight;
     const headerH = docWidth >= 450 ? 60 : 70;
     document.querySelectorAll("#fullpage>section").forEach((e, i) => {
@@ -36,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         e.querySelector(".contents").style.height = `${vh - headerH}px`;
       }
     });
+    document.documentElement.style.setProperty("--vh", `${vh * 0.01}px`)
   }
   setViewport();
   window.addEventListener("resize", setViewport);

@@ -1188,6 +1188,10 @@ footer li::after {
 
 @media screen and (max-width: 450px) {
 
+  :root {
+    --vh: 0;
+  }
+
   .pc {
     display: none;
   }
@@ -1239,6 +1243,7 @@ footer li::after {
     background-image: url("./images/main1_off_m.jpg");
     transition: 2s background-image;
     overflow: hidden;
+    height: calc(var(--vh) * 100);
   }
 
   section.section01.on {
@@ -1247,6 +1252,7 @@ footer li::after {
 
   section.section01 .desc {
     transition-property: opacity;
+    display: contents;
   }
 
   section.section01 p:nth-of-type(1) {
@@ -1255,13 +1261,12 @@ footer li::after {
     font-size: 3.5vh;
     line-height: 1.5;
     color: #fff;
-    margin-bottom: 46vh;
+    margin-bottom: calc(var(--vh) * 46);
   }
 
   section.section01 .imgWrap {
-    margin: auto;
+    margin: 0 auto calc(var(--vh) * 4);
     width: 36vh;
-    margin-bottom: 4vh;
   }
 
   section.section01 img {

@@ -1614,3 +1614,7 @@ footer li::after {
 .fp-watermark {
   opacity: 0;
 }
+
+.sectionBg {
+  display: none;
+}

@@ -316,6 +316,7 @@ section.section04 .swiperWrap {
 
 section.section04.on .swiperWrap {
   opacity: 1;
+  transform: translateX(0);
 }
 
 section.section04 .swiper img {
@@ -340,9 +341,15 @@ section.section04 .swiper .swiper-slide:not(.swiper-slide-active) img {
   filter: brightness(0.8);
 }
 
-
 section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
   background-color: #101820;
+}
+
+section.section04 .swiperArrow {
+  background: url("./images/Arrow.png") no-repeat center/cover;
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
 }
 
 section.section05 {
@@ -757,6 +764,7 @@ footer li::after {
     position: absolute;
     right: 40px;
     bottom: calc(50% - 213px);
+    transform: translateX(200px);
   }
 
 
@@ -775,16 +783,10 @@ footer li::after {
     margin: 0 10px !important;
   }
 
-
-
   section.section04 .swiperArrow {
     width: 13px;
     height: 26px;
-    background: url("./images/Arrow.png") no-repeat center/cover;
-    position: absolute;
-    top: 190px;
-    z-index: 10;
-    cursor: pointer;
+    top: 182px;
   }
 
   section.section04 .swiperArrowPrev {
@@ -1467,6 +1469,8 @@ footer li::after {
   section.section04 .swiperWrap {
     width: calc(100% - 80px);
     margin: 6vh auto 0;
+    position: relative;
+    transform: translateX(200px);
   }
 
   section.section04 .swiperBtnWrapper {
@@ -1477,6 +1481,22 @@ footer li::after {
     width: 1.4vh;
     height: 1.4vh;
     margin: 0 1vh !important;
+  }
+
+  section.section04 .swiperArrow {
+    width: 3.5vw;
+    aspect-ratio: 1/2;
+    filter: brightness(0);
+    top:calc(43% - 1.75vw);
+  }
+
+  section.section04 .swiperArrowPrev {
+    left: calc(-3.5vw - 10px);
+  }
+
+  section.section04 .swiperArrowNext {
+    transform: rotate(180deg);
+    right: calc(-3.5vw - 10px);
   }
 
   section.section05 {

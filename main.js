@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelectorAll(".navi li")[navIdx].classList.add("on");
     }
   };
-  //new fullpage("#fullpage", fullpageSetting);
+  new fullpage("#fullpage", fullpageSetting);
 
   //100vh 세팅
   function setViewport() {
@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const swiperSetting = {
     slidesPerView: 2,
     // 무한 루프
-    //autoplay: true,
+    autoplay: true,
     loop: true,
     loopAdditionalSlides: 1,
     //페이지를 로딩한 직후 작동

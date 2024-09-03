@@ -696,13 +696,13 @@ footer li::after {
     justify-content: space-between;
     align-items: center;
     position: absolute;
-    bottom: 60px;
+    bottom: 50%;
     width: calc(100% - 80px);
-    transform: translateY(200px);
+    transform: translateY(calc(50% + 200px));
   }
 
   section.section03.on .prdGrid {
-    transform: translateY(0);
+    transform: translateY(50%);
   }
 
   section.section03 .prdDesc {
@@ -987,6 +987,11 @@ footer li::after {
   section.section03 .prdGrid {
     position: static;
     width: 100%;
+    transform: none;
+  }
+
+  section.section03.on .prdGrid {
+    transform: none;
   }
 
   section.section03 .btnWrap {

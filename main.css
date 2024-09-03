@@ -1037,84 +1037,82 @@ footer li::after {
     gap: 20px;
   }
 
-  @media screen and (min-height: 1000px) {
+  section.section03 .prdDesc {
+    text-align: center;
+    max-width: 510px;
+  }
 
-    section.section03 .prdDesc {
-      text-align: center;
-      max-width: 510px;
-    }
+  section.section03.on .prdGrid {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
 
-    section.section03.on .prdGrid {
-      flex-direction: column;
-      align-items: center;
-      gap: 60px;
-    }
+  section.section03 .btnWrap {
+    flex-direction: row;
+  }
 
-    section.section03 .btnWrap {
-      flex-direction: row;
-    }
+  section.section03 .prdImg {
+    width: 60%;
+    max-width: 444px;
+  }
 
-    section.section03 .prdImg {
-      width: 60%;
-      max-width: 444px;
-    }
+  section.section03 .prdImg img {
+    width: 100%;
+    max-width: none;
+  }
 
-    section.section03 .prdImg img {
-      width: 100%;
-      max-width: none;
-    }
+  section.section04 .contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+  section.section04 :is(p, .swiperWrap) {
+    position: static;
+  } 
 
-    section.section04 .contents {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: 60px;
-    }
-    section.section04 :is(p, .swiperWrap) {
-      position: static;
-    } 
+  section.section04 p {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
 
-    section.section04 p {
-      width: 100%;
-      max-width: 600px;
-      text-align: center;
-    }
+  section.section05 .fp-overflow>.contents {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    min-height: calc(100vh - 160px);
+    height: auto;
+    padding: 60px 0;
+  }
 
-    section.section05 .fp-overflow>.contents {
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-      justify-content: center;
-      gap: 60px;
-      height: calc(100vh - 160px);
-    }
+  section.section05 .faq {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    transform: none;
+  }
 
-    section.section05 .faq {
-      width: 100%;
-      max-width: 600px;
-      height: auto;
-      transform: none;
-    }
+  section.section05 .prdWrap {
+    height: auto;
+    width: 50%;
+    max-width: 556px;
+  }
 
-    section.section05 .prdWrap {
-      height: auto;
-      width: 50%;
-      max-width: 556px;
-    }
+  section.section04.on p {
+    transform: translate(0, 0);
+  }
 
-    section.section04.on p {
-      transform: translate(0, 0);
-    }
-
-    section.section05 .prd {
-      transform: none;
-      max-width: none;
-    }
-    section.section05 :is(.prdWrap, .faq, footer, .prd) {
-      position: static;
-    }
-
+  section.section05 .prd {
+    transform: none;
+    max-width: none;
+  }
+  section.section05 :is(.prdWrap, .faq, footer, .prd) {
+    position: static;
   }
 }
 

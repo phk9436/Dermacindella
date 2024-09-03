@@ -27,6 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   new fullpage("#fullpage", fullpageSetting);
 
+  //100vh 세팅
+  const setViewport = () => {
+    const vh = window.innerHeight;
+    const headerH = docWidth >= 450 ? 60 : 70;
+    document.querySelectorAll("#fullpage>section").forEach((e, i) => {
+      if(i === 0 || i === 2 || i === 3) {
+        e.querySelector(".contents").style.height = `${vh - headerH}px`;
+      }
+    });
+  }
+  setViewport();
+  window.addEventListener("resize", setViewport);
+
   //page1
   const sect = document.querySelectorAll("section");
   setTimeout(() => sect[0].classList.add("on"), 200);

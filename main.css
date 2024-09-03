@@ -933,29 +933,35 @@ footer li::after {
   }
 }
 
-@media screen and (min-height: 1140px) {
-  section.section02 .cards {
-    top: 50%;
-    transform: translateY(calc(-50% + 80vh));
-  }
-
-  section.section02.on .cards {
-    transform: translateY(-50%);
-  }
-}
-
 @media screen and (max-width: 1050px) and (min-width: 450px) {
 
   section.section02 .contents {
-    min-height: 960px;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 60px 40px;
+  }
+
+  section.section02 :is(.desc, .cards) {
+    position: static;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  section.section02 .desc {
+    text-align: center;
   }
 
   section.section02 .desc p {
-    max-width: calc(100% - 450px);
+    width: 100%;
+    max-width: none;
   }
 
   section.section02 :is(.cardTop, .cardDesc) {
-    width: 410px;
+    width: 100%;
   }
   section.section02 .card {
     width: 100%;

@@ -78,7 +78,7 @@ section {
 }
 
 section:not(.section02) {
-  height: 100vh;
+  height: 100%;
 }
 
 section.section01 .desc {
@@ -466,7 +466,7 @@ footer li::after {
   position: fixed;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 0;
 }
 
@@ -1228,7 +1228,7 @@ footer li::after {
   }
 
   section.section01 .contents {
-    height: calc(100vh - 70px);
+    height: calc(100% - 70px);
     margin-top: 70px;
     display: flex;
     flex-direction: column;
@@ -1378,7 +1378,7 @@ footer li::after {
   }
 
   section.section03 .contents {
-    height: calc(100vh - 70px);
+    height: calc(100% - 70px);
     margin-top: 70px;
     display: flex;
     flex-direction: column;
@@ -1441,7 +1441,7 @@ footer li::after {
   }
 
   section.section04 .contents {
-    height: calc(100vh - 70px);
+    height: calc(100% - 70px);
     margin-top: 70px;
     display: flex;
     flex-direction: column;

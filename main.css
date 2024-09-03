@@ -602,7 +602,7 @@ footer li::after {
   }
 
   section.section02 .contents {
-    height: 1140px;
+    min-height: 1140px;
     position: relative;
   }
 
@@ -678,7 +678,7 @@ footer li::after {
 
   section.section02 .cardDesc dt::after {
     height: 12px;
-    top: calc(50% - 6px);
+    top: 8px;
   }
 
   section.section02 .cardDesc dd {
@@ -741,6 +741,7 @@ footer li::after {
 
   section.section03 .prdImg img {
     max-height: calc(100vh - 200px);
+    max-width: 50vw;
   }
 
   section.section04 p {
@@ -931,6 +932,128 @@ footer li::after {
     background-image: url("./images/main4.png");
   }
 }
+
+@media screen and (min-height: 1140px) {
+  section.section02 .cards {
+    top: calc(50% - 494px);
+  }
+
+  
+}
+
+@media screen and (max-width: 1050px) and (min-width: 450px) {
+
+  section.section02 .contents {
+    min-height: 960px;
+  }
+
+  section.section02 .desc p {
+    max-width: calc(100% - 450px);
+  }
+
+  section.section02 :is(.cardTop, .cardDesc) {
+    width: 410px;
+  }
+  section.section02 .card {
+    width: 100%;
+  }
+
+  section.section02 .cardWrap {
+    width: 100%;
+  }
+
+  section.section02 .card .imgWrap {
+    width: 60px;
+  }
+
+  section.section02 .cardDesc dl {
+    grid-template-columns: 80px 1fr;
+  }
+
+  section.section03 .contents {
+    display: flex;
+    align-items: center;
+  }
+
+  section.section03 .prdGrid {
+    position: static;
+    width: 100%;
+  }
+
+  section.section03 .btnWrap {
+    flex-direction: column;
+  }
+
+  section.section03 .btnWrap a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+  }
+
+  section.section03 .btnWrap a::before {
+    position: static;
+    height: 20px;
+  }
+
+  section.section05 .prdWrap {
+    width: calc(100% - 587px);
+    height: calc(100% - 100px);
+  }
+
+  section.section04 p {
+    bottom: 50%;
+    transform: translateY(-50%);
+  }
+
+  section.section04.on p {
+    transform: translate(0, 50%);
+  }
+
+  section.section05 .prd {
+    width: 100%;
+    bottom: 50%;
+  }
+
+  .faq {
+    min-width: 467px;
+  }
+
+  footer nav {
+    width: 180px;
+  }
+
+  footer .contents {
+    gap: 20px;
+  }
+
+  @media screen and (max-width: 900px) {
+
+    section.section04 .contents {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+    }
+    section.section04 :is(p, .swiperWrap) {
+      position: static;
+    } 
+
+    section.section04 p {
+      width: 100%;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    section.section04.on p {
+      transform: translate(0, 0);
+    }
+  }
+
+}
+
 
 @media screen and (min-height: 800px) {
 

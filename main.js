@@ -29,11 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //100vh 세팅
   function setViewport() {
+    docWidth = document.querySelector("body").getBoundingClientRect().width;
     const vh = window.innerHeight;
     let headerH;
-    if(docWidth < 450) headerH = 60;
-    if(docWidth < 1440) headerH = 70;
     if(docWidth >= 1440) headerH = 80;
+    if(docWidth < 1440) headerH = 60;
+    if(docWidth < 450) headerH = 70;
     document.querySelectorAll("#fullpage>section").forEach((e, i) => {
       if(i === 0 || i === 2 || i === 3) {
         e.querySelector(".contents").style.height = `${vh - headerH}px`;

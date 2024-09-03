@@ -741,7 +741,7 @@ footer li::after {
 
   section.section03 .prdImg img {
     max-height: calc(100vh - 200px);
-    max-width: 50vw;
+    max-width: calc(50vw - 60px);
   }
 
   section.section04 p {
@@ -935,10 +935,13 @@ footer li::after {
 
 @media screen and (min-height: 1140px) {
   section.section02 .cards {
-    top: calc(50% - 494px);
+    top: 50%;
+    transform: translateY(calc(-50% + 80vh));
   }
 
-  
+  section.section02.on .cards {
+    transform: translateY(-50%);
+  }
 }
 
 @media screen and (max-width: 1050px) and (min-width: 450px) {
@@ -1053,6 +1056,32 @@ footer li::after {
   }
 
   @media screen and (min-height: 1000px) {
+
+    section.section03 .prdDesc {
+      text-align: center;
+      max-width: 510px;
+    }
+
+    section.section03.on .prdGrid {
+      flex-direction: column;
+      align-items: center;
+      gap: 60px;
+    }
+
+    section.section03 .btnWrap {
+      flex-direction: row;
+    }
+
+    section.section03 .prdImg {
+      width: 60%;
+      max-width: 444px;
+    }
+
+    section.section03 .prdImg img {
+      width: 100%;
+      max-width: none;
+    }
+
     section.section04 .contents {
       display: flex;
       flex-direction: column;

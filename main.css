@@ -1308,17 +1308,17 @@ footer li::after {
 
   section.section02 .desc p {
     font-size: 2.5vh;
-    padding-top: 20vh;
+    padding-top: calc(calc(var(--vh) * 6) + 70px);
   }
 
   section.section02 .desc em {
     font-size: 4.5vh;
-    margin-bottom: 2vh;
+    margin-bottom: calc(var(--vh) * 2);
     display: inline-block;
   }
 
   section.section02 .cards {
-    margin-top: 12vh;
+    margin-top: calc(var(--vh) * 12);
   }
 
   section.section02 :where(.card, .cardWrap) {
@@ -1347,7 +1347,7 @@ footer li::after {
   }
 
   section.section02 .cardWrap:nth-child(2) {
-    margin-top: 14vh;
+    margin-top: calc(var(--vh) * 14);
   }
 
   section.section02 .cardDesc {

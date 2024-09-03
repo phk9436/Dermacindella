@@ -309,7 +309,6 @@ section.section04.on p {
 
 section.section04 .swiperWrap {
   opacity: 0;
-  transform: translateX(200px);
   transition: 1.5s;
   transition-property: transform, opacity;
   transition-delay: 0.9s;
@@ -317,7 +316,6 @@ section.section04 .swiperWrap {
 
 section.section04.on .swiperWrap {
   opacity: 1;
-  transform: translateX(0);
 }
 
 section.section04 .swiper img {
@@ -1613,4 +1611,8 @@ footer li::after {
 
 .fp-watermark {
   opacity: 0;
+}
+
+.swiper-cube .swiper-slide {
+  transform-origin: 0 0 !important;
 }

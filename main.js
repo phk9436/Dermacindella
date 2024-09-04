@@ -173,6 +173,14 @@ document.addEventListener("DOMContentLoaded", () => {
     "main3.png",
     "main4.png"
   ];
+  const imagesP = [
+    "main1_off_p.jpg",
+    "main1_on_p.jpg",
+    "main2_off.png",
+    "main2_on.png",
+    "main3.png",
+    "main4.png"
+  ]
   const imagesM = [
     "main1_off_m.jpg",
     "main1_on_m.jpg",
@@ -190,5 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
   const docWidth = document.querySelector("body").getBoundingClientRect().width;
-  docWidth >= 450 ? setImages(imagesW) : setImages(imagesM);
+  docWidth <= 450 && setImages(imagesM);
+  docWidth <= 1050 && setImages(imagesP);
+  docWidth > 1050 && setImages(imagesW);
 });

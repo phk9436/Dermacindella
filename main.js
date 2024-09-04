@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const setImages = (img) => {
     img.forEach((e, i) => {
       images[i] = new Image();
-      images[i].src = `./images/${e}`;
+      images[i].src = `https://dhnp.speedgabia.com/images/${e}`;
     });
   }
   const docWidth = document.querySelector("body").getBoundingClientRect().width;

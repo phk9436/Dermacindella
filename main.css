@@ -284,11 +284,11 @@ section.section03 .btnWrap a::before {
 }
 
 section.section03 .btnWrap a:first-child::before {
-  background-image: url("./images/main3_btn1.png");
+  background-image: url("https://dhnp.speedgabia.com/images/main3_btn1.png");
 }
 
 section.section03 .btnWrap a:last-child::before {
-  background-image: url("./images/main3_btn2.png");
+  background-image: url("https://dhnp.speedgabia.com/images/main3_btn2.png");
 }
 
 section.section03 .btnWrap a:hover {
@@ -346,7 +346,7 @@ section.section04 .swiperBtnWrapper span.swiper-pagination-bullet-active {
 }
 
 section.section04 .swiperArrow {
-  background: url("./images/Arrow.png") no-repeat center/cover;
+  background: url("https://dhnp.speedgabia.com/images/Arrow.png") no-repeat center/cover;
   position: absolute;
   cursor: pointer;
   z-index: 10;
@@ -530,13 +530,13 @@ footer li::after {
   }
 
   section.section01 {
-    background-image: url("./images/main1_off.jpg");
+    background-image: url("https://dhnp.speedgabia.com/images/main1_off.jpg");
     background-position: left center;
     transition: 2s background-image;
   }
 
   section.section01.on {
-    background-image: url("./images/main1_on.jpg");
+    background-image: url("https://dhnp.speedgabia.com/images/main1_on.jpg");
   }
 
   section.section01 .contents {
@@ -591,14 +591,14 @@ footer li::after {
   }
 
   section.section02 {
-    background-image: url("./images/main2_off.png");
+    background-image: url("https://dhnp.speedgabia.com/images/main2_off.png");
     background-attachment: fixed;
     transition: 2s background-image;
     transition-delay: 0.5s;
   }
 
   section.section02.on {
-    background-image: url("./images/main2_on.png");
+    background-image: url("https://dhnp.speedgabia.com/images/main2_on.png");
   }
 
   section.section02 .contents {
@@ -910,7 +910,7 @@ footer li::after {
   footer nav p::after {
     width: 20px;
     height: 10px;
-    background: url("./images/footerArrow.png") no-repeat center/cover;
+    background: url("https://dhnp.speedgabia.com/images/footerArrow.png") no-repeat center/cover;
     position: absolute;
     top: calc(50% - 5px);
   }
@@ -925,18 +925,18 @@ footer li::after {
   .sectionBg .bgCont {
     height: calc(100% - 60px);
     margin-top: 60px;
-    background-image: url("./images/main3.png");
+    background-image: url("https://dhnp.speedgabia.com/images/main3.png");
   }
 
   .sectionBg.on .bgCont {
-    background-image: url("./images/main4.png");
+    background-image: url("https://dhnp.speedgabia.com/images/main4.png");
   }
 }
 
 @media screen and (max-width: 1050px) and (min-width: 450px) {
 
   section.section01 {
-    background-image: url("./images/main1_off_p.jpg");
+    background-image: url("https://dhnp.speedgabia.com/images/main1_off_p.jpg");
   }
 
   section.section01 .desc {
@@ -972,7 +972,7 @@ footer li::after {
   }
 
   section.section01.on {
-    background-image: url("./images/main1_on_p.jpg");
+    background-image: url("https://dhnp.speedgabia.com/images/main1_on_p.jpg");
   }
 
   section.section02 .contents {
@@ -1475,14 +1475,14 @@ footer li::after {
   }
 
   section.section01 {
-    background-image: url("./images/main1_off_m.jpg");
+    background-image: url("https://dhnp.speedgabia.com/images/main1_off_m.jpg");
     transition: 2s background-image;
     overflow: hidden;
     height: calc(var(--vh) * 100);
   }
 
   section.section01.on {
-    background-image: url("./images/main1_on_m.jpg");
+    background-image: url("https://dhnp.speedgabia.com/images/main1_on_m.jpg");
   }
 
   section.section01 .desc {
@@ -1531,14 +1531,14 @@ footer li::after {
   }
 
   section.section02 {
-    background-image: url("./images/main2_off_m.jpg");
+    background-image: url("https://dhnp.speedgabia.com/images/main2_off_m.jpg");
     background-attachment: fixed;
     transition: 2s background-image;
     transition-delay: 0.5s;
   }
 
   section.section02.on {
-    background-image: url("./images/main2_on_m.jpg");
+    background-image: url("https://dhnp.speedgabia.com/images/main2_on_m.jpg");
   }
 
   section.section02 .desc p {
@@ -1831,7 +1831,7 @@ footer li::after {
 
   footer li::after,
   footer nav p::after {
-    background: url("./images/footerArrow.png") no-repeat center/cover;
+    background: url("https://dhnp.speedgabia.com/images/footerArrow.png") no-repeat center/cover;
     position: absolute;
     width: 16px;
     height: 8px;
@@ -1851,11 +1851,11 @@ footer li::after {
 
   .sectionBg .bgCont {
     height: 100%;
-    background-image: url("./images/main3_m.png");
+    background-image: url("https://dhnp.speedgabia.com/images/main3_m.png");
   }
 
   .sectionBg.on .bgCont {
-    background-image: url("./images/main4_m.png");
+    background-image: url("https://dhnp.speedgabia.com/images/main4_m.png");
   }
 
 }

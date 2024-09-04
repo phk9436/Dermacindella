@@ -38,6 +38,7 @@
 
 body {
   font-family: 'Pretendard', 맑음고딕, sans-serif;
+  color: #101820;
 }
 
 ul,
@@ -1544,6 +1545,7 @@ footer li::after {
   section.section02 .desc p {
     font-size: 2.5vh;
     padding-top: calc(calc(var(--vh) * 6) + 70px);
+    font-weight: 400;
   }
 
   section.section02 .desc em {
@@ -1642,6 +1644,7 @@ footer li::after {
 
   section.section03 .prdDesc p {
     font-size: 2.5vh;
+    font-weight: 400;
   }
 
   section.section03 .prdDesc em {
@@ -1662,7 +1665,8 @@ footer li::after {
     justify-content: center;
     align-items: center;
     gap: 2vh;
-    line-height: calc(2.5vh + 20px)
+    line-height: calc(2.5vh + 20px);
+    font-weight: 400;
   }
 
   section.section03 .btnWrap a::before {
@@ -1693,6 +1697,7 @@ footer li::after {
     transform: translateX(200px);
     transition: 1.5s;
     transition-delay: 0.9s;
+    font-weight: 400;
   }
 
   section.section04 em {

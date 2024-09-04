@@ -37,7 +37,7 @@ window.addEventListener("load", () => {
     const vh = window.innerHeight;
     let headerH;
     if (docWidth >= 450) headerH = 80;
-    if (docWidth < 450) headerH = 70;
+    if (docWidth < 450) headerH = 90;
     document.querySelectorAll("#fullpage>section").forEach((e, i) => {
       if (i === 0 || i === 2 || i === 3) {
         e.querySelector(".contents").style.height = `${vh - headerH}px`;

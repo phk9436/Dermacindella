@@ -1501,7 +1501,7 @@ footer li::after {
 
   section.section01 .imgWrap {
     margin: 0 auto calc(var(--vh) * 4);
-    width: 36vh;
+    width: 32vh;
   }
 
   section.section01 img {

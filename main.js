@@ -1,4 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("load", () => {
+
+  document.querySelector(".loading").classList.add("off");
 
   let docWidth = document.querySelector("body").getBoundingClientRect().width;
   //fullpage
@@ -47,9 +49,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //page1
   const sect = document.querySelectorAll("section");
-  setTimeout(() => sect[0].classList.add("on"), 200);
+  setTimeout(() => sect[0].classList.add("on"), 500);
 
-  setTimeout(() => document.querySelector(".waves").classList.add("on"), 700);
+  setTimeout(() => document.querySelector(".waves").classList.add("on"), 1200);
 
   //page4
   //swiper
@@ -154,4 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector("footer ul").style.height = "0";
     }
   });
+
+  document.querySelector("body").style.height = `${window.innerHeight}px`;
 });

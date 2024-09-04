@@ -22,7 +22,7 @@ window.addEventListener("load", () => {
         document.querySelector(".sectionBg").classList.add("on");
       }
     },
-    afterLoad: function(origin, destination) {
+    afterLoad: function (origin, destination) {
       let navIdx = destination.index === 0 ? 0 : destination.index - 1;
       document.querySelectorAll(".navi li").forEach((e) => e.classList.remove("on"));
       document.querySelectorAll(".navi li")[navIdx].classList.add("on");
@@ -35,15 +35,14 @@ window.addEventListener("load", () => {
     docWidth = document.querySelector("body").getBoundingClientRect().width;
     const vh = window.innerHeight;
     let headerH;
-    if(docWidth >= 1440) headerH = 80;
-    if(docWidth < 1440) headerH = 60;
-    if(docWidth < 450) headerH = 70;
+    if (docWidth >= 1440) headerH = 80;
+    if (docWidth < 1440) headerH = 60;
+    if (docWidth < 450) headerH = 70;
     document.querySelectorAll("#fullpage>section").forEach((e, i) => {
-      if(i === 0 || i === 2 || i === 3) {
+      if (i === 0 || i === 2 || i === 3) {
         e.querySelector(".contents").style.height = `${vh - headerH}px`;
       }
     });
-    document.documentElement.style.setProperty("--vh", `${vh * 0.01}px`)
   }
   setViewport();
   window.addEventListener("resize", setViewport);
@@ -159,4 +158,10 @@ window.addEventListener("load", () => {
   });
 
   document.querySelector("body").style.height = `${window.innerHeight}px`;
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  docWidth = document.querySelector("body").getBoundingClientRect().width;
+  const vh = window.innerHeight;
+  document.documentElement.style.setProperty("--vh", `${vh * 0.01}px`)
 });

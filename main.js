@@ -24,6 +24,7 @@ window.addEventListener("load", () => {
     },
     afterLoad: function (origin, destination) {
       let navIdx = destination.index === 0 ? 0 : destination.index - 1;
+      if(navIdx === -2) navIdx = Number(destination.anchor.slice(-1)) - 2;
       document.querySelectorAll(".navi li").forEach((e) => e.classList.remove("on"));
       document.querySelectorAll(".navi li")[navIdx].classList.add("on");
     }

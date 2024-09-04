@@ -1509,8 +1509,8 @@ footer li::after {
   }
 
   section.section01 .contents {
-    height: calc(100% - 70px);
-    margin-top: 70px;
+    height: calc(100% - 90px);
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -1538,7 +1538,7 @@ footer li::after {
     font-size: 3.5vh;
     line-height: 1.5;
     color: #fff;
-    margin-bottom: calc(var(--vh) * 46);
+    margin-bottom: calc(var(--vh) * 44);
   }
 
   section.section01 .imgWrap {
@@ -1598,7 +1598,7 @@ footer li::after {
 
   section.section02 .desc p {
     font-size: 2.5vh;
-    padding-top: calc(calc(var(--vh) * 6) + 70px);
+    padding-top: calc(calc(var(--vh) * 6) + 90px);
     font-weight: 400;
   }
 
@@ -1675,8 +1675,8 @@ footer li::after {
   }
 
   section.section03 .contents {
-    height: calc(100% - 70px);
-    margin-top: 70px;
+    height: calc(100% - 90px);
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1742,8 +1742,8 @@ footer li::after {
   }
 
   section.section04 .contents {
-    height: calc(100% - 70px);
-    margin-top: 70px;
+    height: calc(100% - 90px);
+    margin-top: 90px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1816,7 +1816,7 @@ footer li::after {
   }
 
   .faq {
-    margin-top: calc(8vh + 70px);
+    margin-top: calc(8vh + 90px);
     transition-delay: 0.7s;
   }
 

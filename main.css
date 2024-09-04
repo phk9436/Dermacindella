@@ -879,7 +879,7 @@ footer li::after {
   }
 
   .faq dd.on:first-of-type {
-    height: 50px;
+    height: 80px;
   }
 
   .faq dd.on:nth-of-type(2) {
@@ -1097,12 +1097,20 @@ footer li::after {
     min-width: 467px;
   }
 
+  footer {
+    height: auto;
+    background-color: #101820;
+  }
+
   footer nav {
     width: 180px;
   }
 
   footer .contents {
     gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
   }
 
   section.section03 .prdDesc {

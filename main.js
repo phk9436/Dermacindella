@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {
 
   document.querySelector(".loading").classList.add("off");
+  setTimeout(() => document.querySelector(".loading").style.display = "none", 800)
 
   let docWidth = document.querySelector("body").getBoundingClientRect().width;
   //fullpage

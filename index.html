@@ -22,6 +22,26 @@
 </head>
 
 <body>
+
+  <div class="loading" style="position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: calc(var(--vh) * 100);
+    z-index: 999;
+    background-color:#03051a;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: 0.5s;
+    transition-delay: 0.3s;">
+    로딩 중입니다...
+  </div>
+
   <header>
     <div class="contents">
       <div class="logoWrapper">
@@ -244,11 +264,6 @@
   <div class="sectionBg">
     <div class="bgCont"></div>
   </div>
-
-  <div class="loading">
-    로딩 중입니다...
-  </div>
-
 
 </body>
 

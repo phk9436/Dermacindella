@@ -98,18 +98,21 @@ section.section01 p:nth-of-type(2) {
   background-color: #101820;
 }
 
-section.section01 .waves {
+section.section01 .waves,
+.loading .waves {
   position: absolute;
   transform: translateY(-50%);
   transition: 0.5s opacity;
   opacity: 0;
 }
 
-section.section01 .waves.on {
+section.section01 .waves.on,
+.loading .waves {
   opacity: 1;
 }
 
-section.section01 .waves .wave {
+section.section01 .waves .wave,
+.loading .waves .wave {
   position: absolute;
   border: 2px solid #fff;
   aspect-ratio: 1;
@@ -120,21 +123,25 @@ section.section01 .waves .wave {
   opacity: 1;
 }
 
-section.section01 .waves.on .wave {
+section.section01 .waves.on .wave,
+.loading .waves .wave {
   animation-name: wave;
   animation-duration: 2s;
   animation-iteration-count: infinite;
 }
 
-section.section01 .waves .wave:nth-child(1) {
+section.section01 .waves .wave:nth-child(1),
+.loading .waves .wave:nth-child(1) {
   animation-delay: 0s;
 }
 
-section.section01 .waves .wave:nth-child(2) {
+section.section01 .waves .wave:nth-child(2),
+.loading .waves .wave:nth-child(2) {
   animation-delay: 0.3s;
 }
 
-section.section01 .waves .wave:nth-child(3) {
+section.section01 .waves .wave:nth-child(3),
+.loading .waves .wave:nth-child(3) {
   animation-delay: 0.6s;
 }
 
@@ -587,8 +594,21 @@ footer li::after {
     bottom: 60px;
   }
 
+  .loading .waves {
+    right: calc(50% - 45px);
+    top: calc(50% + 45px);
+  }
+
+  .loading img {
+    width: 40px;
+  }
+
   section.section01 .waves .wave {
     width: 60px;
+  }
+
+  .loading .waves .wave {
+    width: 90px;
   }
 
   section.section02 {
@@ -1004,6 +1024,7 @@ footer li::after {
   section.section02 :is(.cardTop, .cardDesc) {
     width: 100%;
   }
+
   section.section02 .card {
     width: 100%;
   }
@@ -1124,9 +1145,10 @@ footer li::after {
     align-items: center;
     gap: 60px;
   }
+
   section.section04 :is(p, .swiperWrap) {
     position: static;
-  } 
+  }
 
   section.section04 p {
     width: 100%;
@@ -1166,6 +1188,7 @@ footer li::after {
     transform: none;
     max-width: none;
   }
+
   section.section05 :is(.prdWrap, .faq, footer, .prd) {
     position: static;
   }
@@ -1239,8 +1262,17 @@ footer li::after {
     font-size: 16px;
   }
 
+  .loading .waves {
+    top: calc(50% + 45px);
+    right: calc(50% - 45px);
+  }
+
   section.section01 .waves .wave {
     width: 75px;
+  }
+
+  .loading .waves .wave {
+    width: 90px;
   }
 
   section.section02 .contents {
@@ -1527,6 +1559,19 @@ footer li::after {
     bottom: calc(50% - 20vh);
   }
 
+  .loading .waves {
+    top: calc(50% + 4vh);
+    right: calc(50% - 4vh);
+  }
+
+  .loading img {
+    width: 3.2vh;
+  }
+
+  .loading .waves .wave {
+    width: 8vh;
+  }
+
   section.section01 .waves .wave {
     width: 6vh;
   }
@@ -1727,7 +1772,7 @@ footer li::after {
     width: 3.5vw;
     aspect-ratio: 1/2;
     filter: brightness(0);
-    top:calc(43% - 1.75vw);
+    top: calc(43% - 1.75vw);
   }
 
   section.section04 .swiperArrowPrev {
@@ -1884,7 +1929,7 @@ footer li::after {
   width: 100vw;
   height: calc(var(--vh) * 100);
   z-index: 999;
-  background-color:#03051a;
+  background-color: #03051a;
   color: #fff;
   font-size: 20px;
   font-weight: 700;

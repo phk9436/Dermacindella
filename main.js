@@ -1,7 +1,7 @@
 window.addEventListener("load", () => {
 
   document.querySelector(".loading").classList.add("off");
-  setTimeout(() => document.querySelector(".loading").style.display = "none", 800)
+  setTimeout(() => document.querySelector(".loading").style.display = "none", 1000);
 
   let docWidth = document.querySelector("body").getBoundingClientRect().width;
   //fullpage
@@ -52,7 +52,7 @@ window.addEventListener("load", () => {
   const sect = document.querySelectorAll("section");
   setTimeout(() => sect[0].classList.add("on"), 500);
 
-  setTimeout(() => document.querySelector(".waves").classList.add("on"), 1200);
+  setTimeout(() => document.querySelector(".section01 .waves").classList.add("on"), 1200);
 
   //page4
   //swiper

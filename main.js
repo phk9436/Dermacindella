@@ -161,7 +161,33 @@ window.addEventListener("load", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  docWidth = document.querySelector("body").getBoundingClientRect().width;
   const vh = window.innerHeight;
-  document.documentElement.style.setProperty("--vh", `${vh * 0.01}px`)
+  document.documentElement.style.setProperty("--vh", `${vh * 0.01}px`);
+
+  const imagesW = [
+    "main1_off.jpg",
+    "main1_on.jpg",
+    "main2_off.png",
+    "main2_on.png",
+    "main3.png",
+    "main4.png"
+  ];
+  const imagesM = [
+    "main1_off_m.jpg",
+    "main1_on_m.jpg",
+    "main2_off_m.jpg",
+    "main2_on_m.jpg",
+    "main3_m.png",
+    "main4_m.png"
+  ]
+
+  let images = [];
+  const setImages = (img) => {
+    img.forEach((e, i) => {
+      images[i] = new Image();
+      images[i].src = `./images/${e}`;
+    });
+  }
+  const docWidth = document.querySelector("body").getBoundingClientRect().width;
+  docWidth >= 450 ? setImages(imagesW) : setImages(imagesM);
 });

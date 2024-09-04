@@ -276,7 +276,6 @@ section.section03 .prdDesc em {
 
 section.section03 .btnWrap a {
   border: 1px solid #fff;
-  backdrop-filter: blur(20px);
   font-weight: 300;
   width: 100%;
   position: relative;
@@ -1557,8 +1556,8 @@ footer li::after {
   }
 
   section.section01 .waves {
-    right: calc(var(--vh) * 5);
-    bottom: calc(50% - var(--vh) * 20);
+    right: calc(var(--vh) * 8);
+    bottom: calc(50% - var(--vh) * 18);
   }
 
   .loading .waves {

@@ -1887,16 +1887,16 @@ footer li::after {
   }
 
   .faq dd {
-    font-size: 1.8vh;
+    font-size: 2vh;
   }
 
   .faq dd.on:first-of-type {
-    height: 13vh;
+    height: 15vh;
     padding-bottom: 2vh;
   }
 
   .faq dd.on:nth-of-type(2) {
-    height: 5vh;
+    height: 6vh;
     padding-bottom: 2vh;
   }
 
@@ -1922,7 +1922,7 @@ footer li::after {
 
   footer nav {
     padding: 0 8px;
-    font-size: 16px;
+    font-size: 14px;
     margin: 20px 0;
   }
 

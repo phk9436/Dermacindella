@@ -27,6 +27,7 @@ window.addEventListener("load", () => {
       if(navIdx === -2) navIdx = Number(destination.anchor.slice(-1)) - 2;
       document.querySelectorAll(".navi li").forEach((e) => e.classList.remove("on"));
       document.querySelectorAll(".navi li")[navIdx].classList.add("on");
+      if(docWidth > 450 && destination.index === 0) document.querySelector(".navi li").classList.remove("on");
     }
   };
   new fullpage("#fullpage", fullpageSetting);

@@ -513,6 +513,25 @@ footer li::after {
     color: #fff;
   }
 
+  header ul.navi li {
+    position: relative;
+  }
+
+  header ul.navi li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 4px;
+    height: 1px;
+    width: 0;
+    background-color: #fff;
+    transition: 0.5s;
+  }
+
+  header ul.navi li:where(:hover, .on)::after {
+    width: 100%;
+  }
+
   .contents {
     max-width: 1440px;
     margin: auto;

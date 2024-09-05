@@ -89,6 +89,7 @@ window.addEventListener("load", () => {
     },
     scrollOverflow: true,
   };
+  
   let swiper;
   const setSwiper = () => {
     if (docWidth >= 1440) {
@@ -124,7 +125,7 @@ window.addEventListener("load", () => {
         slideShadows: false
       }
     });
-  }
+  };
 
   setSwiper();
   window.addEventListener("resize", () => {
@@ -146,16 +147,15 @@ window.addEventListener("load", () => {
   document.querySelector("footer nav").addEventListener("click", (e) => {
     isNav = !isNav;
     e.target.classList.toggle("on");
-    console.log(isNav)
     if (isNav) {
       let lh = 0;
       document.querySelectorAll("footer nav li").forEach(() => {
         lh += docWidth >= 450 ? 54 : 40;
       });
       document.querySelector("footer ul").style.height = `${lh}px`;
-    } else {
-      document.querySelector("footer ul").style.height = "0";
+      return;
     }
+    document.querySelector("footer ul").style.height = "0";
   });
 
   document.querySelector("body").style.height = `${window.innerHeight}px`;
@@ -180,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "main2_on.png",
     "main3.png",
     "main4.png"
-  ]
+  ];
   const imagesM = [
     "main1_off_m.jpg",
     "main1_on_m.jpg",
@@ -188,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
     "main2_on_m.jpg",
     "main3_m.png",
     "main4_m.png"
-  ]
+  ];
 
   let images = [];
   const setImages = (img) => {
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
       images[i] = new Image();
       images[i].src = `https://dhnp.speedgabia.com/images/${e}`;
     });
-  }
+  };
   const docWidth = document.querySelector("body").getBoundingClientRect().width;
   docWidth <= 450 && setImages(imagesM);
   (docWidth > 450 && docWidth <= 1050) && setImages(imagesP);

@@ -1534,7 +1534,7 @@ footer li::after {
   }
 
   header ul.navi li {
-    font-size: 13px;
+    font-size: 15px;
     color: #717a83;
     transition: 0.2s color;
   }
@@ -1922,7 +1922,7 @@ footer li::after {
 
   footer nav {
     padding: 0 8px;
-    font-size: 14px;
+    font-size: 16px;
     margin: 20px 0;
   }
 
@@ -1952,7 +1952,7 @@ footer li::after {
   }
 
   footer .contents .footerWrap>p {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.5;
     font-weight: 300;
   }

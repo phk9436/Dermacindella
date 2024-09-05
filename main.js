@@ -13,7 +13,7 @@ window.addEventListener("load", () => {
 
       let navIdx = destination.index === 0 ? 0 : destination.index - 1;
       document.querySelectorAll(".navi li").forEach((e) => e.classList.remove("on"));
-      document.querySelectorAll(".navi li")[navIdx].classList.add("on");
+      if(docWidth < 450 || destination.index !== 0) document.querySelectorAll(".navi li")[navIdx].classList.add("on");
 
       if (destination.index === 2) {
         document.querySelector(".sectionBg").classList.remove("on");
@@ -26,8 +26,7 @@ window.addEventListener("load", () => {
       let navIdx = destination.index === 0 ? 0 : destination.index - 1;
       if(navIdx === -2) navIdx = Number(destination.anchor.slice(-1)) - 2;
       document.querySelectorAll(".navi li").forEach((e) => e.classList.remove("on"));
-      document.querySelectorAll(".navi li")[navIdx].classList.add("on");
-      if(docWidth > 450 && destination.index === 0) document.querySelector(".navi li").classList.remove("on");
+      if(docWidth < 450 || destination.index !== 0) document.querySelectorAll(".navi li")[navIdx].classList.add("on");
     }
   };
   new fullpage("#fullpage", fullpageSetting);

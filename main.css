@@ -496,6 +496,14 @@ footer li::after {
   z-index: 1;
 }
 
+.footerWrap {
+  display: contents;
+}
+
+.pad {
+  display: none;
+}
+
 
 @media screen and (min-width: 450px) {
 
@@ -521,7 +529,7 @@ footer li::after {
     content: '';
     display: block;
     position: absolute;
-    bottom: 4px;
+    bottom: 2px;
     height: 1px;
     width: 0;
     background-color: #fff;
@@ -956,8 +964,8 @@ footer li::after {
     top: calc(50% - 5px);
   }
 
-  footer .contents>p {
-    font-size: 12px;
+  footer .contents .footerWrap>p {
+    font-size: 14px;
     color: #fff;
     line-height: 18px;
     font-weight: 300;
@@ -1116,20 +1124,39 @@ footer li::after {
     min-width: 467px;
   }
 
+  .pad {
+    display: block;
+  }
+
   footer {
     height: auto;
     background-color: #101820;
   }
 
   footer nav {
-    width: 180px;
+    width: 100%;
   }
 
   footer .contents {
-    gap: 20px;
+    align-items: center;
+    padding: 30px 50px 30px 0;
+  }
+
+  footer img:nth-of-type(1) {
+    display: none;
+  }
+
+  footer .imgWrap {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer .footerWrap {
+    display: flex;
+    width: 100%;
+    gap: 30px;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
   }
 
   section.section03 .prdDesc {
@@ -1895,8 +1922,8 @@ footer li::after {
 
   footer nav {
     padding: 0 8px;
-    font-size: 14px;
-    margin: 3vh 0
+    font-size: 16px;
+    margin: 20px 0;
   }
 
   footer nav p,
@@ -1906,7 +1933,7 @@ footer li::after {
   }
 
   footer ul {
-    bottom: calc(2vh + 18px);
+    bottom: 39px;
     padding: 0 8px;
   }
 
@@ -1924,8 +1951,8 @@ footer li::after {
     display: block;
   }
 
-  footer .contents>p {
-    font-size: 1.8vh;
+  footer .contents .footerWrap>p {
+    font-size: 16px;
     line-height: 1.5;
     font-weight: 300;
   }

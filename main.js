@@ -150,7 +150,7 @@ window.addEventListener("load", () => {
     if (isNav) {
       let lh = 0;
       document.querySelectorAll("footer nav li").forEach(() => {
-        lh += docWidth >= 450 ? 53 : 39;
+        lh += docWidth >= 450 ? 54 : 40;
       });
       document.querySelector("footer ul").style.height = `${lh}px`;
     } else {

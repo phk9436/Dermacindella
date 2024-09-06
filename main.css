@@ -1674,7 +1674,7 @@ footer li::after {
   }
 
   section.section02 .card p {
-    font-size: calc(var(--vh) * 2.3);
+    font-size: 4.6vw;
     line-height: 1.6;
   }
 
@@ -1686,7 +1686,7 @@ footer li::after {
   section.section02 .card .imgWrap {
     top: calc(var(--vh) * 0.6);
     right: calc(var(--vh) * 0.6);
-    width: calc(var(--vh) * 8.5);
+    width: 16vw;
   }
 
   section.section02 .cardWrap:nth-child(2) {
@@ -1701,7 +1701,7 @@ footer li::after {
   }
 
   section.section02 :where(.cardTop, .cardWrap) {
-    gap: 3vh;
+    gap: 6vw;
   }
 
   section.section02 .cardDesc dl {

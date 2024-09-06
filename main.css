@@ -39,6 +39,8 @@
 body {
   font-family: 'Pretendard', 맑음고딕, sans-serif;
   color: #101820;
+
+  height: calc(var(--vh) * 100);
   @supports (-webkit-touch-callout: none) {
     height: -webkit-fill-available !important;
   }

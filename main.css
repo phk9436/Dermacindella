@@ -217,7 +217,19 @@ section.section02 .card {
 }
 
 section.section02 .card:hover {
-  filter: brightness(1.2);
+  animation: cardHover 0.8s;
+}
+
+@keyframes cardHover {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.2);
+  }
+  100% {
+    filter: brightness(1);
+  }
 }
 
 section.section02 .card p {

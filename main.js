@@ -1,5 +1,6 @@
 window.addEventListener("load", () => {
 
+  //loading
   document.querySelector(".loading").classList.add("off");
   setTimeout(() => document.querySelector(".loading").style.display = "none", 1000);
 

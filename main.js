@@ -55,6 +55,22 @@ window.addEventListener("load", () => {
 
   setTimeout(() => document.querySelector(".section01 .waves").classList.add("on"), 1200);
 
+
+  //page2
+  document.querySelectorAll(".card").forEach((e) => {
+    let setTimeCard;
+    const startTime = () => setTimeCard = setTimeout(() => e.classList.remove("on"), 500);
+    const cancleTime = () => clearTimeout(setTimeCard);
+    e.addEventListener("mouseover", () => {
+      e.classList.add("on");
+      startTime();
+    });
+    e.addEventListener("mouseout", () => {
+      e.classList.remove("on");
+      cancleTime()
+    })
+  })
+
   //page4
   //swiper
   const swiperSetting = {

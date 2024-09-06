@@ -39,6 +39,16 @@
 body {
   font-family: 'Pretendard', 맑음고딕, sans-serif;
   color: #101820;
+
+  @supports (-webkit-touch-callout: none) {
+    height: -webkit-fill-available;
+  }
+}
+
+#fullpage {
+  @supports (-webkit-touch-callout: none) {
+    height: -webkit-fill-available;
+  }
 }
 
 ul,
@@ -1624,11 +1634,11 @@ footer li::after {
   }
 
   .loading .waves .wave {
-    width: 8vh;
+    width: calc(var(--vh) * 8);
   }
 
   section.section01 .waves .wave {
-    width: 6vh;
+    width: calc(var(--vh) * 6);
   }
 
   section.section02 {
@@ -1709,7 +1719,7 @@ footer li::after {
 
   section.section02 .cardDesc dt::after {
     height: 1.5vh;
-    top: calc( calc(var(--vh) * 0.75) + 4px);
+    top: calc(calc(var(--vh) * 0.75) + 4px);
   }
 
   section.section02 .cardDesc dd {
@@ -1744,12 +1754,12 @@ footer li::after {
   }
 
   section.section03 .prdDesc p {
-    font-size:  calc(var(--vh) * 2.5);
+    font-size: calc(var(--vh) * 2.5);
     font-weight: 400;
   }
 
   section.section03 .prdDesc em {
-    font-size:  calc(var(--vh) * 4.5);
+    font-size: calc(var(--vh) * 4.5);
     margin-bottom: calc(var(--vh) * 2);
   }
 
@@ -1761,7 +1771,7 @@ footer li::after {
   }
 
   section.section03 .btnWrap a {
-    font-size:  calc(var(--vh) * 2.2);
+    font-size: calc(var(--vh) * 2.2);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1777,7 +1787,7 @@ footer li::after {
   section.section03 .prdImg {
     margin: auto;
     height: calc(var(--vh) * 36);
-    margin-top:  calc(var(--vh) * 4);
+    margin-top: calc(var(--vh) * 4);
     margin-bottom: 0;
   }
 

@@ -158,7 +158,6 @@ window.addEventListener("load", () => {
     document.querySelector("footer ul").style.height = "0";
   });
 
-  document.querySelector("body").style.height = `${window.innerHeight}px`;
 });
 
 document.addEventListener("DOMContentLoaded", () => {

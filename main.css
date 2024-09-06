@@ -1973,6 +1973,10 @@ footer li::after {
 
 }
 
+#fullpage .fp-overflow {
+  max-height: calc(var(--vh) * 100);
+}
+
 .fp-overflow::-webkit-scrollbar {
   display: none;
 }

@@ -1581,7 +1581,7 @@ footer li::after {
   section.section01 p:nth-of-type(1) {
     width: 100%;
     text-align: center;
-    font-size: 3.5vh;
+    font-size: calc(var(--vh) * 3.5);
     line-height: 1.5;
     color: #fff;
     margin-bottom: calc(var(--vh) * 44);
@@ -1599,11 +1599,11 @@ footer li::after {
   section.section01 p:nth-of-type(2) {
     width: calc(100vw - 40px);
     padding: 12px 0;
-    border-radius: 4vh;
+    border-radius: calc(var(--vh) * 4);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.5vh;
+    font-size: calc(var(--vh) * 1.5);
     line-height: 1.5;
     text-align: center;
     margin-bottom: 20px;
@@ -1615,12 +1615,12 @@ footer li::after {
   }
 
   .loading .waves {
-    top: calc(50% + 4vh);
-    right: calc(50% - 4vh);
+    top: calc(50% + var(--vh) * 4);
+    right: calc(50% - var(--vh) * 4);
   }
 
   .loading img {
-    width: 3.2vh;
+    width: calc(var(--vh) * 3.2);
   }
 
   .loading .waves .wave {
@@ -1643,13 +1643,13 @@ footer li::after {
   }
 
   section.section02 .desc p {
-    font-size: 2.5vh;
+    font-size: calc(var(--vh) * 2.5);
     padding-top: calc(calc(var(--vh) * 6) + 90px);
     font-weight: 400;
   }
 
   section.section02 .desc em {
-    font-size: 4.5vh;
+    font-size: calc(var(--vh) * 4.5);
     margin-bottom: calc(var(--vh) * 2);
     display: inline-block;
   }
@@ -1665,23 +1665,23 @@ footer li::after {
   section.section02 .card {
     aspect-ratio: 129/184;
     border-radius: 10px;
-    padding: 12px;
+    padding: calc(var(--vh) * 1.4);
   }
 
   section.section02 .card p {
-    font-size: 2.3vh;
+    font-size: calc(var(--vh) * 2.3);
     line-height: 1.6;
   }
 
   section.section02 .card em {
-    font-size: 3.5vh;
-    margin-bottom: 0.3vh;
+    font-size: calc(var(--vh) * 3.5);
+    margin-bottom: calc(var(--vh) * 0.3);
   }
 
   section.section02 .card .imgWrap {
-    top: 0.6vh;
-    right: 0.6vh;
-    width: 8.5vh;
+    top: calc(var(--vh) * 0.6);
+    right: calc(var(--vh) * 0.6);
+    width: calc(var(--vh) * 8.5);
   }
 
   section.section02 .cardWrap:nth-child(2) {
@@ -1692,7 +1692,7 @@ footer li::after {
     border-radius: 10px;
     padding: 18px 18px 18px 0;
     margin-top: 60px;
-    font-size: 1.8vh;
+    font-size: calc(var(--vh) * 1.8);
   }
 
   section.section02 :where(.cardTop, .cardWrap) {
@@ -1804,25 +1804,25 @@ footer li::after {
   }
 
   section.section04 em {
-    font-size: 4.5vh;
+    font-size: calc(var(--vh) * 4.5);
     display: inline-block;
-    margin-bottom: 2vh;
+    margin-bottom: calc(var(--vh) * 2);
   }
 
   section.section04 .swiperWrap {
     width: calc(85% - 80px);
-    margin: 6vh auto 0;
+    margin: calc(var(--vh) * 6) auto 0;
     position: relative;
     transform: translateX(200px);
   }
 
   section.section04 .swiperBtnWrapper {
-    margin-top: 3vh;
+    margin-top: calc(var(--vh) * 3);
   }
 
   section.section04 .swiperBtnWrapper span {
-    width: 1.4vh;
-    height: 1.4vh;
+    width: calc(var(--vh) * 1.4);
+    height: calc(var(--vh) * 1.4);
     margin: 0 1vh !important;
   }
 
@@ -1854,7 +1854,7 @@ footer li::after {
   section.section05 .prd {
     width: calc(100% - 40px);
     margin: auto;
-    margin-top: 14vh;
+    margin-top: calc(var(--vh) * 14);
   }
 
   section.section05 .prdWrap {
@@ -1862,51 +1862,51 @@ footer li::after {
   }
 
   .faq {
-    margin-top: calc(8vh + 90px);
+    margin-top: calc(var(--vh) * 8 + 90px);
     transition-delay: 0.7s;
   }
 
   .faq h2 {
-    font-size: 6vh;
-    margin-bottom: 3vh;
+    font-size: calc(var(--vh) * 6);
+    margin-bottom: calc(var(--vh) * 3);
   }
 
   .faq h3 {
-    font-size: 2.3vh;
+    font-size: calc(var(--vh) * 2.3);
     font-weight: 400;
   }
 
   .faq dl {
-    margin-top: 3vh;
+    margin-top: calc(var(--vh) * 3);
     line-height: 1.5;
   }
 
   .faq dt {
-    padding: 2vh 0;
-    font-size: 2.3vh;
+    padding: calc(var(--vh) * 2) 0;
+    font-size: calc(var(--vh) * 2.3);
   }
 
   .faq dd {
-    font-size: 2vh;
+    font-size: calc(var(--vh) * 2);
   }
 
   .faq dd.on:first-of-type {
-    height: 15vh;
-    padding-bottom: 2vh;
+    height: calc(var(--vh) * 15);
+    padding-bottom: calc(var(--vh) * 2);
   }
 
   .faq dd.on:nth-of-type(2) {
-    height: 6vh;
-    padding-bottom: 2vh;
+    height: calc(var(--vh) * 6);
+    padding-bottom: calc(var(--vh) * 2);
   }
 
   .faq .btn {
-    width: 2vh;
+    width: calc(var(--vh) * 2);
   }
 
   .faq .btn::before,
   .faq .btn::after {
-    width: 1vh;
+    width: var(--vh);
   }
 
   footer {
@@ -1952,7 +1952,7 @@ footer li::after {
   }
 
   footer .contents .footerWrap>p {
-    font-size: 14px;
+    font-size: calc(var(--vh) * 1.7);
     line-height: 1.5;
     font-weight: 300;
   }

@@ -152,11 +152,11 @@ window.addEventListener("load", () => {
   });
 
   //page5
-  const faqBtn = document.querySelectorAll(".faq .btn");
+  const faqBtn = document.querySelectorAll(".faq dt");
   faqBtn.forEach((e) => {
     e.addEventListener("click", () => {
-      e.classList.toggle("on");
-      e.closest("dt").nextElementSibling.classList.toggle("on");
+      e.querySelector(".btn").classList.toggle("on");
+      e.nextElementSibling.classList.toggle("on");
     });
   });
 

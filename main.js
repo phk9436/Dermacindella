@@ -28,6 +28,18 @@ window.addEventListener("load", () => {
       if (navIdx === -2) navIdx = Number(destination.anchor.slice(-1)) - 2;
       document.querySelectorAll(".navi li").forEach((e) => e.classList.remove("on"));
       if (docWidth < 450 || destination.index !== 0) document.querySelectorAll(".navi li")[navIdx].classList.add("on");
+    },
+    onScrollOverflow: function(section, slide, position, direction) {
+      document.querySelector("body").getBoundingClientRect().width;
+      const contentH = document.querySelector(".section02 .contents").getBoundingClientRect().height;
+      const headerH = document.querySelector("header").getBoundingClientRect().height;
+      const scrollH = docWidth > 450 ? contentH + headerH : contentH;
+      const maxPosition = Math.floor(scrollH - window.innerHeight);
+      const scrollPer = Math.floor((position / maxPosition) * 100);
+      const margin = Math.floor(window.getComputedStyle(document.querySelectorAll(".cardWrap")[1]).marginTop.split("px")[0]);
+      const transform  = Math.floor((margin * scrollPer) / 100);
+      document.querySelectorAll(".cardWrap")[0].style.transform = `translateY(${transform}px)`;  
+      document.querySelectorAll(".cardWrap")[1].style.transform = `translateY(-${transform}px)`;  
     }
   };
   new fullpage("#fullpage", fullpageSetting);

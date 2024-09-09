@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
       if (docWidth < 450 || destination.index !== 0) document.querySelectorAll(".navi li")[navIdx].classList.add("on");
     },
     onScrollOverflow: function(section, slide, position, direction) {
-      document.querySelector("body").getBoundingClientRect().width;
+      docWidth = document.querySelector("body").getBoundingClientRect().width;
       const contentH = document.querySelector(".section02 .contents").getBoundingClientRect().height;
       const headerH = document.querySelector("header").getBoundingClientRect().height;
       const scrollH = docWidth > 450 ? contentH + headerH : contentH;

@@ -30,6 +30,10 @@
   font-display: swrap;
 }
 
+:root {
+  --vh: 0;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -39,11 +43,6 @@
 body {
   font-family: 'Pretendard', 맑음고딕, sans-serif;
   color: #101820;
-
-  height: calc(var(--vh) * 100);
-  @supports (-webkit-touch-callout: none) {
-    height: -webkit-fill-available !important;
-  }
 }
 
 ul,
@@ -156,7 +155,6 @@ section.section01 .waves .wave:nth-child(3),
     border-width: 2px;
     opacity: 1;
   }
-
   100% {
     transform: scale(2);
     border-width: 1px;
@@ -165,7 +163,6 @@ section.section01 .waves .wave:nth-child(3),
 }
 
 section.section02 .desc {
-
   opacity: 0;
   transform: translateY(-200px);
   transition: 1.5s;
@@ -557,7 +554,7 @@ footer li::after {
     height: 100%;
   }
 
-  section .contents {
+  section .contents, .sectionBg .bgCont {
     width: 100%;
     height: calc(100vh - 80px);
     padding: 0 40px;
@@ -983,8 +980,6 @@ footer li::after {
   }
 
   .sectionBg .bgCont {
-    height: calc(100% - 60px);
-    margin-top: 60px;
     background-image: url("https://dhnp.speedgabia.com/images/main3.png");
   }
 
@@ -1056,19 +1051,10 @@ footer li::after {
   }
 
   section.section02 .desc p {
-    width: 100%;
     max-width: none;
   }
 
-  section.section02 :is(.cardTop, .cardDesc) {
-    width: 100%;
-  }
-
-  section.section02 .card {
-    width: 100%;
-  }
-
-  section.section02 .cardWrap {
+  section.section02 :is(.desc p, .cardTop, .cardDesc, .card, .cardWrap) {
     width: 100%;
   }
 
@@ -1300,19 +1286,8 @@ footer li::after {
     font-size: 20px;
   }
 
-  header .contents {
+  :is(header, section) .contents {
     padding: 0 85px;
-  }
-
-  section .contents {
-    padding: 0 85px;
-    height: calc(100vh - 80px);
-    margin-top: 80px;
-  }
-
-  .sectionBg .bgCont {
-    height: calc(100% - 80px);
-    margin-top: 80px;
   }
 
   section.section01 p:nth-of-type(1) {
@@ -1365,11 +1340,7 @@ footer li::after {
     top: 80px;
   }
 
-  section.section02 .cardTop {
-    gap: 40px;
-  }
-
-  section.section02 .cardWrap {
+  section.section02 :is(.cardTop, .cardWrap) {
     gap: 40px;
   }
 
@@ -1518,10 +1489,6 @@ footer li::after {
     height: 100%;
     margin: 0 auto;
   }
-}
-
-:root {
-  --vh: 0;
 }
 
 @media screen and (max-width: 450px) {

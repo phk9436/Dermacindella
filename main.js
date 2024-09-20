@@ -107,8 +107,8 @@ window.addEventListener("load", () => {
     on: {
       slideChangeTransitionStart: function () {
         const { realIndex } = this;
-        if (realIndex >= 4) {
-          const idx = realIndex - 4;
+        if (realIndex >= 3) {
+          const idx = realIndex - 3;
           document.querySelectorAll(".swiper-pagination-bullet").forEach((e, i) => {
             e.classList.remove("swiper-pagination-bullet-active");
             if (i === idx) e.classList.add("swiper-pagination-bullet-active");

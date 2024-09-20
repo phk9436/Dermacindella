@@ -349,7 +349,7 @@ section.section04 .swiperBtnWrapper span {
   opacity: 1;
 }
 
-section.section04 .swiperBtnWrapper span:where(:nth-child(5), :nth-child(6), :nth-child(7), :nth-child(8)) {
+section.section04 .swiperBtnWrapper span:where(:nth-child(4), :nth-child(5), :nth-child(6)) {
   display: none;
 }
 

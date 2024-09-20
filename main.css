@@ -1426,7 +1426,7 @@ section.section02 .cardWrap {
 
   section.section04 p {
     font-size: 40px;
-    width: calc(100% - 800px);
+    width: calc(100% - 900px);
     bottom: calc(50% - 107px);
   }
 

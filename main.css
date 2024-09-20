@@ -1007,7 +1007,7 @@ section.section02 .cardWrap {
   section.section01 p:nth-of-type(1) {
     text-align: center;
     font-size: 42px;
-    margin: calc(var(--vh) * 10) 0 auto;
+    margin: calc(var(--vh) * 14) 0 auto;
   }
 
   section.section01 .imgWrap {
@@ -1018,7 +1018,7 @@ section.section02 .cardWrap {
   section.section01 img {
     margin-top: auto;
     width: calc(var(--vh) * 40);
-    max-width: 450px;
+    max-width: 440px;
     margin-bottom: calc(var(--vh) * 10);
   }
 

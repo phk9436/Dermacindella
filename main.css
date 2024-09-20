@@ -1568,7 +1568,11 @@ section.section02 .cardWrap {
     font-size: calc(var(--vh) * 3.5);
     line-height: 1.5;
     color: #fff;
-    margin-bottom: calc(var(--vh) * 44);
+    margin-bottom: calc(var(--vh) * 42);
+  }
+
+  section.section01 p:nth-of-type(1) em {
+    font-size: calc(var(--vh) * 4);
   }
 
   section.section01 .imgWrap {

@@ -504,6 +504,21 @@ footer li::after {
   z-index: 1;
 }
 
+footer dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+  color: #fff;
+}
+
+footer p em {
+  margin-right: 10px;
+}
+
+footer dt {
+  font-weight: 700;
+}
+
 .footerWrap {
   display: contents;
 }
@@ -978,7 +993,8 @@ section.section02 .cardWrap {
     top: calc(50% - 5px);
   }
 
-  footer .contents .footerWrap>p {
+  footer .contents .footerWrap div:nth-child(2) p,
+  footer dl {
     font-size: 14px;
     color: #fff;
     line-height: 18px;
@@ -1923,6 +1939,10 @@ section.section02 .cardWrap {
   footer ul {
     bottom: 39px;
     padding: 0 8px;
+  }
+
+  footer dl {
+    margin-bottom: 20px;
   }
 
   footer li::after,

@@ -10,26 +10,28 @@ window.addEventListener("load", () => {
     anchors: ['section01', 'section02', 'section03', 'section04', 'section05'],
     menu: ".navi",
     onLeave: function (origin, destination) {
-      document.querySelectorAll(".section")[destination.index].classList.add("on");
+      const { index } = destination;
+      document.querySelectorAll(".section")[index].classList.add("on");
 
-      let navIdx = destination.index === 0 ? 0 : destination.index - 1;
+      let navIdx = index === 0 ? 0 : index - 1;
       document.querySelectorAll(".navi li").forEach((e) => e.classList.remove("on"));
-      if (docWidth < 450 || destination.index !== 0) document.querySelectorAll(".navi li")[navIdx].classList.add("on");
+      if (docWidth < 450 || index !== 0) document.querySelectorAll(".navi li")[navIdx].classList.add("on");
 
-      if (destination.index === 2) {
+      if (index === 2) {
         document.querySelector(".sectionBg").classList.remove("on");
       }
-      if (destination.index === 3) {
+      if (index === 3) {
         document.querySelector(".sectionBg").classList.add("on");
       }
     },
     afterLoad: function (origin, destination) {
-      let navIdx = destination.index === 0 ? 0 : destination.index - 1;
-      if (navIdx === -2) navIdx = Number(destination.anchor.slice(-1)) - 2;
+      const { index, anchor } = destination;
+      let navIdx = index === 0 ? 0 : index - 1;
+      if (navIdx === -2) navIdx = Number(anchor.slice(-1)) - 2;
       document.querySelectorAll(".navi li").forEach((e) => e.classList.remove("on"));
-      if (docWidth < 450 || destination.index !== 0) document.querySelectorAll(".navi li")[navIdx].classList.add("on");
+      if (docWidth < 450 || index !== 0) document.querySelectorAll(".navi li")[navIdx].classList.add("on");
     },
-    onScrollOverflow: function(section, slide, position, direction) {
+    onScrollOverflow: function (section, slide, position, direction) {
       docWidth = document.querySelector("body").getBoundingClientRect().width;
       const contentH = document.querySelector(".section02 .contents").getBoundingClientRect().height;
       const headerH = document.querySelector("header").getBoundingClientRect().height;
@@ -37,9 +39,9 @@ window.addEventListener("load", () => {
       const maxPosition = Math.floor(scrollH - window.innerHeight);
       const scrollPer = Math.floor((position / maxPosition) * 100);
       const margin = Math.floor(window.getComputedStyle(document.querySelectorAll(".cardWrap")[1]).marginTop.split("px")[0]);
-      const transform  = Math.floor((margin * scrollPer) / 100);
-      document.querySelectorAll(".cardWrap")[0].style.transform = `translateY(${transform}px)`;  
-      document.querySelectorAll(".cardWrap")[1].style.transform = `translateY(-${transform}px)`;  
+      const transform = Math.floor((margin * scrollPer) / 100);
+      document.querySelectorAll(".cardWrap")[0].style.transform = `translateY(${transform}px)`;
+      document.querySelectorAll(".cardWrap")[1].style.transform = `translateY(-${transform}px)`;
     }
   };
   new fullpage("#fullpage", fullpageSetting);
@@ -118,7 +120,7 @@ window.addEventListener("load", () => {
     },
     scrollOverflow: true,
   };
-  
+
   let swiper;
   const setSwiper = () => {
     if (docWidth >= 1440) {

@@ -692,7 +692,6 @@ section.section02 .cardWrap {
 
   section.section02 .desc p {
     font-size: 30px;
-    width: 420px;
     max-width: calc(100% - 560px)
   }
 
@@ -1010,6 +1009,12 @@ section.section02 .cardWrap {
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .contents {
+    max-width: 1200px;
+  }
+}
+
 @media screen and (max-width: 1050px) and (min-width: 450px) {
 
   section.section01 {
@@ -1279,7 +1284,7 @@ section.section02 .cardWrap {
   }
 
   section.section01 p:nth-of-type(2) {
-    padding: 20px 44px;
+    padding: 18px 40px;
     margin-bottom: 60px;
   }
 
@@ -1313,12 +1318,12 @@ section.section02 .cardWrap {
   }
 
   section.section01 p:nth-of-type(1) {
-    font-size: 52px;
+    font-size: 48px;
   }
 
   section.section01 img {
-    width: 450px;
-    margin-top: 111px;
+    width: 430px;
+    margin-top: 110px;
   }
 
   section.section01 p:nth-of-type(2) {
@@ -1343,18 +1348,17 @@ section.section02 .cardWrap {
   }
 
   section.section02 .desc {
-    top: calc(40vh - 80px);
+    top: calc(40vh - 70px);
   }
 
   section.section02 .desc p {
-    font-size: 40px;
-    width: 560px;
+    font-size: 34px;
     max-width: none;
   }
 
   section.section02 .desc em {
-    font-size: 55px;
-    margin-bottom: 30px;
+    font-size: 50px;
+    margin-bottom: 26px;
   }
 
   section.section02 .cards {
@@ -1377,12 +1381,12 @@ section.section02 .cardWrap {
   }
 
   section.section02 .card em {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     font-size: 46px;
   }
 
   section.section02 .card p {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   section.section02 .card .imgWrap {
@@ -1412,12 +1416,12 @@ section.section02 .cardWrap {
   }
 
   section.section03 .prdDesc em {
-    font-size: 56px;
-    margin-bottom: 30px;
+    font-size: 50px;
+    margin-bottom: 26px;
   }
 
   section.section03 .prdDesc p {
-    font-size: 40px;
+    font-size: 34px;
   }
 
   section.section03 .btnWrap {
@@ -1441,14 +1445,14 @@ section.section02 .cardWrap {
   }
 
   section.section04 p {
-    font-size: 40px;
+    font-size: 34px;
     width: calc(100% - 900px);
-    bottom: calc(50% - 107px);
+    bottom: calc(50% - 70px);
   }
 
   section.section04 em {
-    font-size: 56px;
-    margin-bottom: 30px;
+    font-size: 50px;
+    margin-bottom: 26px;
   }
 
   section.section04 .swiperWrap {
@@ -1483,7 +1487,7 @@ section.section02 .cardWrap {
   }
 
   .faq dl {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .faq dt {
@@ -1640,6 +1644,7 @@ section.section02 .cardWrap {
     background-attachment: fixed;
     transition: 2s background-image;
     transition-delay: 0.5s;
+    padding-bottom: 20px;
   }
 
   section.section02.on {
@@ -1654,12 +1659,12 @@ section.section02 .cardWrap {
 
   section.section02 .desc em {
     font-size: calc(var(--vh) * 4.5);
-    margin-bottom: calc(var(--vh) * 2);
+    margin-bottom: calc(var(--vh) * 1.5);
     display: inline-block;
   }
 
   section.section02 .cards {
-    margin-top: calc(var(--vh) * 12);
+    margin-top: calc(var(--vh) * 6);
   }
 
   section.section02 :where(.card, .cardWrap) {
@@ -1673,13 +1678,12 @@ section.section02 .cardWrap {
   }
 
   section.section02 .card p {
-    font-size: 4.6vw;
+    font-size: 4.2vw;
     line-height: 1.6;
   }
 
   section.section02 .card em {
     font-size: calc(var(--vh) * 3.5);
-    margin-bottom: calc(var(--vh) * 0.3);
   }
 
   section.section02 .card .imgWrap {
@@ -1694,9 +1698,9 @@ section.section02 .cardWrap {
 
   section.section02 .cardDesc {
     border-radius: 10px;
-    padding: 18px 18px 18px 0;
+    padding: 16px 16px 16px 0;
     margin-top: 60px;
-    font-size: calc(var(--vh) * 1.8);
+    font-size: calc(var(--vh) * 1.6);
   }
 
   section.section02 :where(.cardTop, .cardWrap) {

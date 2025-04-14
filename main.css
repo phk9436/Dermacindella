@@ -1284,7 +1284,7 @@ section.section02 .cardWrap {
   }
 
   section.section01 p:nth-of-type(2) {
-    padding: 18px 40px;
+    padding: 16px 38px;
     margin-bottom: 60px;
   }
 
@@ -1318,16 +1318,16 @@ section.section02 .cardWrap {
   }
 
   section.section01 p:nth-of-type(1) {
-    font-size: 48px;
+    font-size: 44px;
   }
 
   section.section01 img {
-    width: 430px;
+    width: 400px;
     margin-top: 110px;
   }
 
   section.section01 p:nth-of-type(2) {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .loading .waves {
@@ -1352,7 +1352,7 @@ section.section02 .cardWrap {
   }
 
   section.section02 .desc p {
-    font-size: 34px;
+    font-size: 32px;
     max-width: none;
   }
 
@@ -1421,7 +1421,7 @@ section.section02 .cardWrap {
   }
 
   section.section03 .prdDesc p {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   section.section03 .btnWrap {
@@ -1445,7 +1445,7 @@ section.section02 .cardWrap {
   }
 
   section.section04 p {
-    font-size: 34px;
+    font-size: 32px;
     width: calc(100% - 900px);
     bottom: calc(50% - 70px);
   }
@@ -1652,13 +1652,13 @@ section.section02 .cardWrap {
   }
 
   section.section02 .desc p {
-    font-size: calc(var(--vh) * 2.5);
+    font-size: calc(var(--vh) * 2.2);
     padding-top: calc(calc(var(--vh) * 6) + 90px);
     font-weight: 400;
   }
 
   section.section02 .desc em {
-    font-size: calc(var(--vh) * 4.5);
+    font-size: calc(var(--vh) * 4.2);
     margin-bottom: calc(var(--vh) * 1.5);
     display: inline-block;
   }
@@ -1752,13 +1752,13 @@ section.section02 .cardWrap {
   }
 
   section.section03 .prdDesc p {
-    font-size: calc(var(--vh) * 2.5);
+    font-size: calc(var(--vh) * 2.2);
     font-weight: 400;
   }
 
   section.section03 .prdDesc em {
-    font-size: calc(var(--vh) * 4.5);
-    margin-bottom: calc(var(--vh) * 2);
+    font-size: calc(var(--vh) * 4.2);
+    margin-bottom: calc(var(--vh) * 1.5);
   }
 
   section.section03 .btnWrap {
@@ -1769,11 +1769,11 @@ section.section02 .cardWrap {
   }
 
   section.section03 .btnWrap a {
-    font-size: calc(var(--vh) * 2.2);
+    font-size: calc(var(--vh) * 2);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: calc(var(--vh) * 2);
+    gap: calc(var(--vh));
     line-height: calc(var(--vh) * 2.5 + 20px);
     font-weight: 400;
   }
@@ -1804,7 +1804,7 @@ section.section02 .cardWrap {
   }
 
   section.section04 p {
-    font-size: 2.5vh;
+    font-size: 2.2vh;
     transform: translateX(200px);
     transition: 1.5s;
     transition-delay: 0.9s;
@@ -1812,9 +1812,9 @@ section.section02 .cardWrap {
   }
 
   section.section04 em {
-    font-size: calc(var(--vh) * 4.5);
+    font-size: calc(var(--vh) * 4.2);
     display: inline-block;
-    margin-bottom: calc(var(--vh) * 2);
+    margin-bottom: calc(var(--vh) * 1.5);
   }
 
   section.section04 .swiperWrap {
